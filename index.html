@@ -681,6 +681,10 @@
                   Приём ванны/душа (обтирание губкой, купание в ванной или под
                   душем)*
                 </span>
+                <span class="calc-popup__checkbox-descr">
+                  Выполняет самостоятельно или требует помощи для мытья только
+                  одной части тела
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-1" value="0" />
                   <i></i>
@@ -694,6 +698,10 @@
               </div>
               <div class="calc-popup__checkbox-wrap">
                 <span class="calc-popup__checkbox-title">Одевание*</span>
+                <span class="calc-popup__checkbox-descr">
+                  Берет одежду и одевается самостоятельно, за исключением
+                  завязывания шнурков
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-2" value="0" />
                   <i></i>
@@ -709,6 +717,11 @@
                 <span class="calc-popup__checkbox-title">
                   Посещение туалета*
                 </span>
+                <span class="calc-popup__checkbox-descr">
+                  Идет в туалетную комнату, использует туалет, поправляет одежду
+                  и возвращается самостоятельно <br>(может использовать трость или
+                  ходунки для поддержки и может использовать утку/писсуар ночью)
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-3" value="0" />
                   <i></i>
@@ -722,6 +735,10 @@
               </div>
               <div class="calc-popup__checkbox-wrap">
                 <span class="calc-popup__checkbox-title">Перемещение*</span>
+                <span class="calc-popup__checkbox-descr">
+                  Ложится и встает с кровати и стула самостоятельно (может
+                  использовать трость или ходунки)
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-4" value="0" />
                   <i></i>
@@ -737,6 +754,10 @@
                 <span class="calc-popup__checkbox-title">
                   Контролирование дефекации и мочеиспускания*
                 </span>
+                <span class="calc-popup__checkbox-descr">
+                  Полностью самостоятельно контролирует дефекацию и
+                  мочеиспускание
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-5" value="0" />
                   <i></i>
@@ -750,6 +771,10 @@
               </div>
               <div class="calc-popup__checkbox-wrap">
                 <span class="calc-popup__checkbox-title">Питание*</span>
+                <span class="calc-popup__checkbox-descr">
+                  Ест самостоятельно (за исключением помощи с нарезкой мяса или
+                  намазыванием масла на хлеб)
+                </span>
                 <label class="calc-popup__checkbox">
                   <input type="radio" name="checkbox-6" value="0" />
                   <i></i>
@@ -807,9 +832,19 @@
                 </div>
                 <select>
                   <option value="0">
+                    Пользуется телефоном по собственной инициативе, набирает
+                    номера
+                  </option>
+                  <option value="1">
                     Набирает несколько известных номеров
                   </option>
-                  <option value="1">Option</option>
+                  <option value="2">
+                    Может ответить на звонки, но самостоятельно сделать вызов не
+                    может
+                  </option>
+                  <option value="3">
+                    Не может самостоятельно пользоваться телефоном
+                  </option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
@@ -823,7 +858,15 @@
                   <option value="0">
                     Совершает самостоятельно все необходимые покупки
                   </option>
-                  <option value="1">Option</option>
+                  <option value="1">
+                    Совершает самостоятельно небольшие покупки
+                  </option>
+                  <option value="2">
+                    Требуется сопровождение при любом посещении магазина
+                  </option>
+                  <option value="3">
+                    Самостоятельно не может посещать магазин и делать покупки
+                  </option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
@@ -835,14 +878,25 @@
                 </div>
                 <select>
                   <option value="0">
-                    Самостоятельно планирует меню, готовит и подает...
+                    Самостоятельно планирует меню, готовит и подает блюда
                   </option>
-                  <option value="1">Option</option>
+                  <option value="1">
+                    Может приготовить блюдо самостоятельно при условии наличия
+                    готовых компонентов
+                  </option>
+                  <option value="2">
+                    Может самостоятельно подогреть и подать уже готовое блюдо,
+                    при этом не соблюдает необходимую диету
+                  </option>
+                  <option value="3">
+                    Полностью зависит от посторонней помощи в приготовлении и
+                    подачи блюд
+                  </option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
                 <div class="calc-popup__select">
-                  <span class="calc-popup__select-label"> Уборка дома* </span>
+                  <span class="calc-popup__select-label">Уборка дома*</span>
                   <span class="calc-popup__select-value"></span>
                 </div>
                 <select>
@@ -869,14 +923,19 @@
               </div>
               <div class="calc-popup__select-wrap">
                 <div class="calc-popup__select">
-                  <span class="calc-popup__select-label"> Стирка* </span>
+                  <span class="calc-popup__select-label">Стирка*</span>
                   <span class="calc-popup__select-value"></span>
                 </div>
                 <select>
                   <option value="0">
                     Самостоятельно стирает все необходимые вещи
                   </option>
-                  <option value="1">Option</option>
+                  <option value="1">
+                    Стирает мелкие вещи, такие как носки, чулки
+                  </option>
+                  <option value="2">
+                    Вся стирка должна осуществляться кем-то
+                  </option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
@@ -888,9 +947,22 @@
                 </div>
                 <select>
                   <option value="0">
-                    Пользуется общественным транспортом если кто-то...
+                    Самостоятельно пользуется общественным транспортом или водит
+                    машину
                   </option>
-                  <option value="1">Option</option>
+                  <option value="1">
+                    Организует собственную поездку на такси, но не пользуется
+                    общественным транспортом
+                  </option>
+                  <option value="2">
+                    Пользуется общественным транспортом если кто-то при этом
+                    помогает или сопровождает
+                  </option>
+                  <option value="3">
+                    Перемещается на такси или машине в сопровождении другого
+                    лица
+                  </option>
+                  <option value="4">Не перемещается</option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
@@ -902,9 +974,16 @@
                 </div>
                 <select>
                   <option value="0">
+                    Самостоятельно принимает необходимые лекарства в правильных
+                    дозировках и в правильное время
+                  </option>
+                  <option value="1">
+                    Принимает лекарство, если оно было кем-то приготовлено для
+                    приема в необходимой дозе
+                  </option>
+                  <option value="2">
                     Не способен самостоятельно принимать лекарства
                   </option>
-                  <option value="1">Option</option>
                 </select>
               </div>
               <div class="calc-popup__select-wrap">
@@ -916,9 +995,17 @@
                 </div>
                 <select>
                   <option value="0">
-                    Самостоятельно контролирует финансовые вопросы...
+                    Самостоятельно контролирует финансовые вопросы (бюджет,
+                    поверка чеков, оплата за жилье, посещение банка),
+                    контролирует доходы
                   </option>
-                  <option value="1">Option</option>
+                  <option value="1">
+                    Занимается ежедневными покупками, но нуждается в помощи с
+                    банковскими операциями и при осуществлении крупных покупок
+                  </option>
+                  <option value="2">
+                    Не способен самостоятельно распоряжаться деньгами
+                  </option>
                 </select>
               </div>
 

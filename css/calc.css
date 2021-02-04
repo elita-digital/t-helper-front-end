@@ -518,6 +518,17 @@
   line-height: 22px;
 }
 
+.calc-popup__checkbox-descr {
+  display: block;
+
+  width: 100%;
+
+  color: rgba(57, 57, 57, 0.4);
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .calc-popup__checkbox {
   display: flex;
   align-items: center;
@@ -612,7 +623,7 @@
 
 .calc-popup__select::after {
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   top: 15px;
   right: 20px;
 
