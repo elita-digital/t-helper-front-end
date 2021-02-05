@@ -41,14 +41,14 @@
 
   color: #fff;
   border-radius: 100px;
-  background: #b21249;
+  background: #ef7622;
 
   font-size: 26px;
   line-height: 30px;
 }
 
 .calc-publication__button:hover {
-  background: #c1416d;
+  background: #f2914e;
 }
 
 .calc-publication__banner {
@@ -76,7 +76,7 @@
 }
 
 .calc-publication__banner h2 span {
-  color: #b21249;
+  color: #ef7622;
 }
 
 .calc-publication__list {
@@ -95,7 +95,7 @@
 
   color: #fff;
   border-radius: 9px;
-  background: #19a0a7;
+  background: #0065a8;
 
   font-size: 22px;
   font-weight: bold;
@@ -232,7 +232,7 @@
   width: 28px;
   height: 28px;
 
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAV1BMVEX////03+brwtD57fH9+vv89/ntydW2H1OyEkm+NmX24+nDRnGyE0rRc5T79PfQb5C9NGPqv87dl6/qwM768fTOaIu9M2Py2OG2HVG2HVLNZYjNZIjtyNVvm8MOAAAAg0lEQVR4Ac3RxRHDUBCDYZkfrtnB/tsMJ5qMGvB//S4LQFFWgFY3ANrO+aAWYsqG3jk3BLHBOTdicqpvczOWVfVtqwFGFaOqqdJUaao0VZrqttFUaaI06XB82ukg8NuB+6pR1c4XVe5uO/9R5Wn/GmuUYl9NDYrubaoZwLWfFkB0Hg13CO8Q9ehbWRIAAAAASUVORK5CYII=");
+  background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI4IiB2aWV3Qm94PSIwIDAgMjggMjgiIHdpZHRoPSIyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBzdHJva2U9IiNlZjc2MjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0Ij48cGF0aCBkPSJtMi44Mjg0MyAzIDIyLjE3MTU3IDIyLjE3MTYiLz48cGF0aCBkPSJtMjUgMi44Mjg0My0yMi4xNzE1NyAyMi4xNzE1NyIvPjwvZz48L3N2Zz4=");
 }
 
 .calc-popup__title {
@@ -252,7 +252,7 @@
 
   margin-bottom: 24px;
 
-  color: #019cb3;
+  color: #0065a8;
 
   font-size: 24px;
   font-weight: bold;
@@ -284,7 +284,7 @@
 
   color: #fff;
   border-radius: 50%;
-  background: #19a0a7;
+  background: #0065a8;
 
   font-size: 100px;
   font-weight: bold;
@@ -320,7 +320,7 @@
 
   color: #fff;
   border-radius: 100px;
-  background: #b21249;
+  background: #ef7622;
 
   font-size: 26px;
   line-height: 1;
@@ -331,7 +331,7 @@
 }
 
 .calc-popup__button:hover {
-  background: #c1416d;
+  background: #f2914e;
 }
 
 .calc-popup__step {
@@ -349,7 +349,7 @@
 
   margin: 24px 0;
 
-  color: #b40b47;
+  color: #ef7622;
 
   font-size: 18px;
   font-weight: bold;
@@ -385,7 +385,7 @@
 
   text-align: center;
 
-  border: 1px solid #b40b47;
+  border: 1px solid #ef7622;
   border-radius: 26px;
 
   font-size: 16px;
@@ -431,7 +431,7 @@
   transition: background 0.2s ease-in-out;
 
   border-radius: 50%;
-  background-color: #b21249;
+  background-color: #ef7622;
   background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiIHdpZHRoPSIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTguNzE2NSA4LjY4MjkxaC0xNC4zMzY1OGw2LjI2MzQ4LTYuNDI3MzljLjUwMDUtLjUxMzY3LjUwMDUtMS4zNTY2MDYgMC0xLjg3MDI3My0uNTAwNi0uNTEzNjY0LTEuMzA5MjEtLjUxMzY2NC0xLjgwOTc3IDBsLTguNDU4MjA4IDguNjc5NjEzYy0uNTAwNTYyLjUxMzY3LS41MDA1NjIgMS4zNDM0NCAwIDEuODU3MTRsOC40NDUzNjggOC42OTI4Yy41MDA1Ni41MTM2IDEuMzA5MjEuNTEzNiAxLjgwOTcxIDAgLjUwMDYtLjUxMzcuNTAwNi0xLjM0MzUgMC0xLjg1NzFsLTYuMjUwNTgtNi40NDA2aDE0LjMzNjU4Yy43MDU5IDAgMS4yODM1LS41OTI3IDEuMjgzNS0xLjMxNzFzLS41Nzc2LTEuMzE3MDktMS4yODM1LTEuMzE3MDl6IiBmaWxsPSIjZmFmYmZjIi8+PC9zdmc+");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -442,7 +442,7 @@
 }
 
 .calc-popup__arrow:hover {
-  background-color: #c1416d;
+  background-color: #f2914e;
 }
 
 .calc-popup__arrow.disabled {
@@ -469,7 +469,7 @@
 }
 
 .calc-popup__dots .active {
-  background: #b21249;
+  background: #ef7622;
 }
 
 .calc-popup__step-value {
@@ -494,7 +494,7 @@
 
   text-align: center;
 
-  border: 1px solid #b40b47;
+  border: 1px solid #ef7622;
   border-radius: 100px;
 
   line-height: 32px;
@@ -578,11 +578,11 @@
 
   opacity: 0;
   border-radius: 50%;
-  background: #019cb3;
+  background: #0065a8;
 }
 
 .calc-popup__checkbox input:checked + i {
-  border-color: #019cb3;
+  border-color: #0065a8;
 }
 
 .calc-popup__checkbox input:checked + i::after {
@@ -618,7 +618,7 @@
 
   cursor: pointer;
 
-  border: 1px solid #b40b47;
+  border: 1px solid #ef7622;
   border-radius: 20px;
 }
 
@@ -644,13 +644,13 @@
 
   transform: scale(0.75) translate(2px, -20px);
 
-  color: #b40b47;
+  color: #ef7622;
 }
 
 .calc-popup__select.has-value .calc-popup__select-label {
   transform: scale(0.75) translate(2px, -20px);
 
-  color: #b40b47;
+  color: #ef7622;
 }
 
 .calc-popup__select-label {
@@ -698,7 +698,7 @@
   pointer-events: none;
 
   opacity: 0;
-  border: 1px solid #b40b47;
+  border: 1px solid #ef7622;
   border-radius: 20px;
   background: #fff;
 }
@@ -720,7 +720,7 @@
 }
 
 .calc-popup__select-item:hover {
-  color: #b40b47;
+  color: #ef7622;
 }
 
 @media screen and (max-width: 992px) {
