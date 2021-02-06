@@ -343,7 +343,10 @@
             <a href="#" class="calc-popup__close js-calc-close"></a>
           </div>
           <div class="calc-popup__steps">
-            <div class="calc-popup__step active">
+            <form
+              action="#"
+              class="calc-popup__step calc-popup__charlson active"
+            >
               <span class="calc-popup__title">
                 Калькулятор показателя хрупкости при миеломе
               </span>
@@ -357,16 +360,19 @@
                 <input
                   type="text"
                   class="calc-popup__input"
+                  name="day"
                   placeholder="день"
                 />
                 <input
                   type="text"
                   class="calc-popup__input"
+                  name="month"
                   placeholder="месяц"
                 />
                 <input
                   type="text"
                   class="calc-popup__input"
+                  name="year"
                   placeholder="год"
                 />
               </div>
@@ -378,272 +384,11 @@
                 Отметьте, пожалуйста, имеющиеся заболевания:
               </span>
 
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">СПИД*</span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-1" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-1" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Цереброваскулярные заболевания*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-2" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-2" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Хронические заболевания легких*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-3" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-3" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Сердечная недостаточность*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-4" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-4" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Системные поражения соединительной ткани*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-5" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-5" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Деменция*</span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-6" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-6" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Гемиплегия*</span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-7" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-7" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Лейкемия*</span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-8" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-8" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Злокачественная лимфома*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-9" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-9" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Инфаркт миокарда*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-10" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-10" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Поражения периферических сосудов*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-11" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-11" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Язвенная болезнь желудка и/или двенадцатиперстной кишки*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-12" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-12" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
+              <div class="calc-popup__step-content"></div>
 
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Язвенная болезнь желудка и/или двенадцатиперстной кишки*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-13" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-13" value="1" />
-                  <i></i>
-                  <span>С конечно-органными поражениями</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-13" value="2" />
-                  <i></i>
-                  <span>Без конечно-органных поражений</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Хронические заболевания печени*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-14" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-14" value="1" />
-                  <i></i>
-                  <span>Легкая степень</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-14" value="2" />
-                  <i></i>
-                  <span>Средняя степень</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-14" value="3" />
-                  <i></i>
-                  <span>Тяжелая степень</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Хронические заболевания почек*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-15" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-15" value="1" />
-                  <i></i>
-                  <span>Легкая степень</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-15" value="2" />
-                  <i></i>
-                  <span>Средняя степень</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-15" value="3" />
-                  <i></i>
-                  <span>Тяжелая степень</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Злокачественная солидная опухоль*
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-16" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-16" value="1" />
-                  <i></i>
-                  <span>Без метастазов</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-16" value="2" />
-                  <i></i>
-                  <span>Метастазирующая</span>
-                </label>
-              </div>
               <div class="calc-popup__step-value">
                 <span>Индекс коморбидности Чарлсона:</span>
-                <span class="calc-popup__step-value-box">12</span>
+                <span class="calc-popup__step-value-box">0</span>
               </div>
               <div class="calc-popup__arrows">
                 <a
@@ -661,8 +406,8 @@
                 ></a>
               </div>
               <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </div>
-            <div class="calc-popup__step">
+            </form>
+            <form action="#" class="calc-popup__step calc-popup__activity">
               <span class="calc-popup__title">
                 Калькулятор показателя хрупкости при миеломе
               </span>
@@ -676,121 +421,11 @@
                 Отметьте, пожалуйста, имеющиеся заболевания:
               </span>
 
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Приём ванны/душа (обтирание губкой, купание в ванной или под
-                  душем)*
-                </span>
-                <span class="calc-popup__checkbox-descr">
-                  Выполняет самостоятельно или требует помощи для мытья только
-                  одной части тела
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-1" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-1" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Одевание*</span>
-                <span class="calc-popup__checkbox-descr">
-                  Берет одежду и одевается самостоятельно, за исключением
-                  завязывания шнурков
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-2" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-2" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Посещение туалета*
-                </span>
-                <span class="calc-popup__checkbox-descr">
-                  Идет в туалетную комнату, использует туалет, поправляет одежду
-                  и возвращается самостоятельно <br />(может использовать трость
-                  или ходунки для поддержки и может использовать утку/писсуар
-                  ночью)
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-3" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-3" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Перемещение*</span>
-                <span class="calc-popup__checkbox-descr">
-                  Ложится и встает с кровати и стула самостоятельно (может
-                  использовать трость или ходунки)
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-4" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-4" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">
-                  Контролирование дефекации и мочеиспускания*
-                </span>
-                <span class="calc-popup__checkbox-descr">
-                  Полностью самостоятельно контролирует дефекацию и
-                  мочеиспускание
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-5" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-5" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
-              <div class="calc-popup__checkbox-wrap">
-                <span class="calc-popup__checkbox-title">Питание*</span>
-                <span class="calc-popup__checkbox-descr">
-                  Ест самостоятельно (за исключением помощи с нарезкой мяса или
-                  намазыванием масла на хлеб)
-                </span>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-6" value="0" />
-                  <i></i>
-                  <span>Нет</span>
-                </label>
-                <label class="calc-popup__checkbox">
-                  <input type="radio" name="checkbox-6" value="1" />
-                  <i></i>
-                  <span>Да</span>
-                </label>
-              </div>
+              <div class="calc-popup__step-content"></div>
 
               <div class="calc-popup__step-value">
                 <span>Индекс базовой повседневной активности Катц:</span>
-                <span class="calc-popup__step-value-box">4</span>
+                <span class="calc-popup__step-value-box">0</span>
               </div>
               <div class="calc-popup__arrows">
                 <a
@@ -808,8 +443,8 @@
                 ></a>
               </div>
               <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </div>
-            <div class="calc-popup__step">
+            </form>
+            <form action="#" class="calc-popup__step calc-popup__iadl">
               <span class="calc-popup__title">
                 Калькулятор показателя хрупкости при миеломе
               </span>
@@ -824,195 +459,11 @@
                 Выберите подходящий вариант ответа
               </span>
 
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Способность использовать телефон*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Пользуется телефоном по собственной инициативе, набирает
-                    номера
-                  </option>
-                  <option value="1">
-                    Набирает несколько известных номеров
-                  </option>
-                  <option value="2">
-                    Может ответить на звонки, но самостоятельно сделать вызов не
-                    может
-                  </option>
-                  <option value="3">
-                    Не может самостоятельно пользоваться телефоном
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Совершение покупок*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Совершает самостоятельно все необходимые покупки
-                  </option>
-                  <option value="1">
-                    Совершает самостоятельно небольшие покупки
-                  </option>
-                  <option value="2">
-                    Требуется сопровождение при любом посещении магазина
-                  </option>
-                  <option value="3">
-                    Самостоятельно не может посещать магазин и делать покупки
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Приготовление пищи*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Самостоятельно планирует меню, готовит и подает блюда
-                  </option>
-                  <option value="1">
-                    Может приготовить блюдо самостоятельно при условии наличия
-                    готовых компонентов
-                  </option>
-                  <option value="2">
-                    Может самостоятельно подогреть и подать уже готовое блюдо,
-                    при этом не соблюдает необходимую диету
-                  </option>
-                  <option value="3">
-                    Полностью зависит от посторонней помощи в приготовлении и
-                    подачи блюд
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">Уборка дома*</span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Поддерживает порядок в доме самостоятельно, прибегает к
-                    посторонней помощи только в исключительных случаях
-                    (необходимость выполнения тяжелой работы)
-                  </option>
-                  <option value="1">
-                    Самостоятельно выполняет простые активности: моет посуду,
-                    заправляет постель, вытирает пыль и т.п.
-                  </option>
-                  <option value="2">
-                    Самостоятельно выполняет простые активности, но не может
-                    проводить уборку и поддерживать чистоту в доме
-                  </option>
-                  <option value="3">
-                    Нужна помощь при выполнении всех домашних дел
-                  </option>
-                  <option value="4">
-                    Отсутствие любой хозяйственной активности
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">Стирка*</span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Самостоятельно стирает все необходимые вещи
-                  </option>
-                  <option value="1">
-                    Стирает мелкие вещи, такие как носки, чулки
-                  </option>
-                  <option value="2">
-                    Вся стирка должна осуществляться кем-то
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Способ перемещения*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Самостоятельно пользуется общественным транспортом или водит
-                    машину
-                  </option>
-                  <option value="1">
-                    Организует собственную поездку на такси, но не пользуется
-                    общественным транспортом
-                  </option>
-                  <option value="2">
-                    Пользуется общественным транспортом если кто-то при этом
-                    помогает или сопровождает
-                  </option>
-                  <option value="3">
-                    Перемещается на такси или машине в сопровождении другого
-                    лица
-                  </option>
-                  <option value="4">Не перемещается</option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Прием лекарств*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Самостоятельно принимает необходимые лекарства в правильных
-                    дозировках и в правильное время
-                  </option>
-                  <option value="1">
-                    Принимает лекарство, если оно было кем-то приготовлено для
-                    приема в необходимой дозе
-                  </option>
-                  <option value="2">
-                    Не способен самостоятельно принимать лекарства
-                  </option>
-                </select>
-              </div>
-              <div class="calc-popup__select-wrap">
-                <div class="calc-popup__select">
-                  <span class="calc-popup__select-label">
-                    Способность заниматься финансами*
-                  </span>
-                  <span class="calc-popup__select-value"></span>
-                </div>
-                <select>
-                  <option value="0">
-                    Самостоятельно контролирует финансовые вопросы (бюджет,
-                    поверка чеков, оплата за жилье, посещение банка),
-                    контролирует доходы
-                  </option>
-                  <option value="1">
-                    Занимается ежедневными покупками, но нуждается в помощи с
-                    банковскими операциями и при осуществлении крупных покупок
-                  </option>
-                  <option value="2">
-                    Не способен самостоятельно распоряжаться деньгами
-                  </option>
-                </select>
-              </div>
+              <div class="calc-popup__step-content"></div>
 
               <div class="calc-popup__step-value">
                 <span>Индекс Лоутона:</span>
-                <span class="calc-popup__step-value-box">12</span>
+                <span class="calc-popup__step-value-box">8</span>
               </div>
               <div class="calc-popup__arrows">
                 <a
@@ -1030,21 +481,21 @@
                 ></a>
               </div>
               <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </div>
+            </form>
             <div class="calc-popup__step calc-popup__result">
               <span class="calc-popup__title">Результат расчета:</span>
               <div class="calc-popup__result-row">
                 <div class="calc-popup__result-content">
-                  <span class="calc-popup__result-circle" style="opacity: 0.5">
-                    4
+                  <span class="calc-popup__result-circle" style="opacity: 1">
+                    0
                   </span>
-                  <span>Пациент «в ослабленном состоянии»</span>
+                  <span>Пациент «в хорошей физической форме»</span>
                 </div>
                 <div class="calc-popup__result-buttons">
                   <a
                     href="assets/result.pdf"
                     target="_blank"
-                    class="calc-popup__button"
+                    class="calc-popup__button js-calc-pdf"
                   >
                     PDF
                   </a>
