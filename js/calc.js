@@ -251,7 +251,7 @@ class Calculator {
     let iadlContentHtml = "";
 
     DATA.charlson.forEach((item, i) => {
-      let html = `<div class="calc-popup__checkbox-wrap"><span class="calc-popup__checkbox-title">${item.title}</span>`;
+      let html = `<div class="calc-popup__checkbox-wrap"><span class="calc-popup__checkbox-title">${item.title}*</span>`;
 
       item.answers.forEach((answer, j) => {
         html += `
@@ -270,7 +270,7 @@ class Calculator {
     DATA.activity.forEach((item, i) => {
       let html = `
         <div class="calc-popup__checkbox-wrap">
-          <span class="calc-popup__checkbox-title">${item.title}</span>
+          <span class="calc-popup__checkbox-title">${item.title}*</span>
           <span class="calc-popup__checkbox-descr">${item.descr}</span>
           <label class="calc-popup__checkbox">
             <input type="radio" name="activity-${i}" value="1" />
@@ -288,7 +288,7 @@ class Calculator {
     });
 
     DATA.iadl.forEach((item, i) => {
-      let html = `<div class="calc-popup__select-wrap"><div class="calc-popup__select"><span class="calc-popup__select-label">${item.title}</span><span class="calc-popup__select-value"></span></div><select name="iadl-${i}">`;
+      let html = `<div class="calc-popup__select-wrap"><div class="calc-popup__select"><span class="calc-popup__select-label">${item.title}*</span><span class="calc-popup__select-value"></span></div><select name="iadl-${i}">`;
 
       item.answers.forEach((answer, j) => {
         html += `<option value="${j}">${answer.label}</option>`;
@@ -404,6 +404,21 @@ class Calculator {
           <span>Пациент «в ослабленном состоянии»</span>`;
       }
     }
+
+    let pdfLink =
+      `https://t-helper.dokku.elita.digital/` +
+      `?t=${TTL}` +
+      `&c=${CharlsonIndex}` +
+      `&cl=${CharlsonIndexAnswers.join("")}` +
+      `&a=${basicActivity}` +
+      `&al=${basicActivityAnswers.join("")}` +
+      `&i=${IADL}` +
+      `&il=${IADLAnswers.join("")}`;
+
+    if (birthday.day && birthday.month && birthday.year)
+      pdfLink += `&b=${birthday.day}.${birthday.month}.${birthday.year}`;
+
+    this.$pdfLink = pdfLink;
   }
 }
 
