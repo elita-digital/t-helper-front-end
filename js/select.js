@@ -9,7 +9,7 @@ class Select {
     $options.forEach(($option) => {
       listHtml += `<a href="#" class="select__item" data-value="${$option.value}">${$option.innerText}</a>`;
 
-      if ($option.selected) {
+      if ($option.getAttribute("selected") !== null) {
         $select.classList.add("has-value");
         $value.innerText = $option.innerText;
       }

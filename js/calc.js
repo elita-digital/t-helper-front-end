@@ -276,8 +276,40 @@ class Calculator {
     const $currentStep = this.$popup.querySelector(".calc-popup__step.active");
     const $nextStep = $currentStep.nextElementSibling;
 
-    $currentStep.classList.remove("active");
-    $nextStep.classList.add("active");
+    let hasInputsWithoutValue = false;
+    const $inputs = Array.from(
+      $currentStep.querySelectorAll("input[type=text]")
+    );
+    const $radios = Array.from(
+      $currentStep.querySelectorAll("input[type=radio]")
+    );
+    const $selects = Array.from(
+      $currentStep.querySelectorAll(".select__value")
+    );
+
+    $inputs.forEach(($input) => {
+      const value = Number($input.value);
+
+      if (isNaN(value)) hasInputsWithoutValue = true;
+    });
+
+    $radios.forEach(($radio) => {
+      const name = $radio.name;
+      const $checkedRadio = $currentStep.querySelector(
+        `input[name=${name}]:checked`
+      );
+
+      if (!$checkedRadio) hasInputsWithoutValue = true;
+    });
+
+    $selects.forEach(($select) => {
+      if ($select.innerText.length === 0) hasInputsWithoutValue = true;
+    });
+
+    if (!hasInputsWithoutValue) {
+      $currentStep.classList.remove("active");
+      $nextStep.classList.add("active");
+    }
   }
 
   recalc() {
