@@ -85,6 +85,31 @@
   font-weight: bold;
 }
 
+.map__placemark {
+  padding: 6px 12px;
+}
+
+.map__placemark-title {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #019cb3;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.map__placemark-adress {
+  display: block;
+
+  color: #393939;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 @media screen and (max-width: 900px) {
   .map__list {
     display: block;

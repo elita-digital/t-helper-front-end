@@ -3,6 +3,7 @@ let DATA;
 const mapConfig = {
   center: [58.6729574349446, 79.50365415310958],
   zoom: 3,
+  controls: ["zoomControl"],
 };
 
 class MapSection {
@@ -50,23 +51,12 @@ class MapSection {
 
         this.$lpuSelect.value = lpuId;
         this.$lpuSelect.dispatchEvent(new Event("change"));
+
+        window.scrollTo(0, this.$mapContainer.offsetTop - 170);
       });
     });
 
-    ymaps.ready(() => {
-      this.map = new ymaps.Map(this.$mapContainer, mapConfig);
-
-      this.placemarks = DATA.lpus.map((lpu) => {
-        const placemark = new ymaps.Placemark([lpu.lat, lpu.lng], {
-          hintContent: lpu.title,
-          balloonContent: lpu.title + "<br><br>" + lpu.address,
-        });
-
-        this.map.geoObjects.add(placemark);
-
-        return placemark;
-      });
-    });
+    this.renderMap();
   }
 
   setCity(cityId) {
@@ -85,9 +75,9 @@ class MapSection {
   }
 
   applyFilters() {
-    this.map.geoObjects.removeAll();
+    this.clusterer.removeAll();
     this.placemarks.forEach((placemark) => {
-      this.map.geoObjects.add(placemark);
+      this.clusterer.add(placemark);
     });
 
     this.map.setCenter(mapConfig.center);
@@ -104,11 +94,11 @@ class MapSection {
     });
 
     if (this.filters.city !== null) {
-      this.map.geoObjects.removeAll();
+      this.clusterer.removeAll();
       this.placemarks.forEach((placemark, id) => {
         const lpu = DATA.lpus[id];
 
-        if (lpu.city === this.filters.city) this.map.geoObjects.add(placemark);
+        if (lpu.city === this.filters.city) this.clusterer.add(placemark);
       });
 
       this.$items.forEach(($item) => {
@@ -127,7 +117,9 @@ class MapSection {
         if (this.filters.city !== lpu.city) $item.classList.add("hidden");
       });
 
-      window.scrollTo(0, this.$mapContainer.offsetTop - 170);
+      const { lat, lng } = DATA.cities[this.filters.city];
+      this.map.setCenter([lat, lng]);
+      this.map.setZoom(10);
     }
 
     if (this.filters.lpu !== null) {
@@ -142,8 +134,8 @@ class MapSection {
 
       this.map.setCenter([lpu.lat, lpu.lng]);
       this.map.setZoom(17);
-      this.map.geoObjects.removeAll();
-      this.map.geoObjects.add(placemark);
+      this.clusterer.removeAll();
+      this.clusterer.add(placemark);
 
       placemark.balloon.open();
     }
@@ -152,7 +144,7 @@ class MapSection {
   render() {
     const cities = DATA.cities
       .map((city, id) => {
-        return `<option value="${id}">${city}</option>`;
+        return `<option value="${id}">${city.title}</option>`;
       })
       .join("");
 
@@ -196,7 +188,7 @@ class MapSection {
           <div class="map__item" data-id="${id}">
             <div class="map__item-title">${lpu.title}</div>
             <div class="map__item-content">
-              <strong>${DATA.cities[lpu.city]},</strong><br />
+              <strong>${DATA.cities[lpu.city].title},</strong><br />
               <span>${lpu.address}</span>
               <a href="#" class="map__item-link">Показать на карте</a>
             </div>
@@ -205,6 +197,49 @@ class MapSection {
       .join("");
 
     this.$list.innerHTML = lpusList;
+  }
+
+  renderMap() {
+    ymaps.ready(() => {
+      this.map = new ymaps.Map(this.$mapContainer, mapConfig);
+      this.clusterer = new ymaps.Clusterer({
+        clusterIconLayout: "default#imageWithContent",
+        clusterIconImageHref: "assets/pin.svg",
+        clusterIconImageSize: [48, 48],
+        clusterIconImageOffset: [-24, -48],
+        clusterIconContentOffset: [19, 10],
+      });
+
+      this.placemarks = DATA.lpus.map((lpu) => {
+        const placemark = new ymaps.Placemark(
+          [lpu.lat, lpu.lng],
+          {
+            hintContent: lpu.title,
+            clusterCaption: lpu.title,
+            balloonContent: `
+              <div class="map__placemark">
+                <span class="map__placemark-title">${lpu.title}</span>
+                <span class="map__placemark-adress">
+                  <strong>${DATA.cities[lpu.city].title},</strong>
+                  ${lpu.address}
+                </span>
+              </div>`,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "assets/pin.svg",
+            iconImageSize: [24, 24],
+            iconImageOffset: [-12, -24],
+          }
+        );
+
+        this.clusterer.add(placemark);
+
+        return placemark;
+      });
+
+      this.map.geoObjects.add(this.clusterer);
+    });
   }
 }
 
