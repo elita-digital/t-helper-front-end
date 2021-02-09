@@ -2,516 +2,359 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- 1. Change project name -->
+    <title>Project</title>
     <link
-      rel="stylesheet"
-      href="https://t-helper.pro/bitrix/cache/css/s1/takeda/template_82922d4f411bf32983eb120eaf28c46e/template_82922d4f411bf32983eb120eaf28c46e_v1.css?1611742128301216"
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-    />
-    <link rel="stylesheet" href="css/calc.css" />
+    <meta name="theme-color" content="#0D65D9" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
+
+            body {
+              margin: 0;
+              padding: 0;
+
+              font-family: "Roboto", sans-serif;
+            }
+
+            .header {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              -ms-flex-align: center;
+              -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+              justify-content: space-between;
+
+              padding: 30px 15px;
+            }
+
+            .header__logo {
+              display: block;
+
+              width: 200px;
+            }
+
+            .header__link {
+              position: relative;
+
+              margin: 0 8px;
+              padding: 15px 20px;
+
+              -webkit-transition: 0.4s ease;
+              -o-transition: 0.4s ease;
+              transition: 0.4s ease;
+              text-decoration: none;
+
+              color: #000;
+              border-radius: 4px;
+              background: #f3f3f3;
+
+              font-size: 15px;
+              font-weight: normal;
+            }
+
+            .header__link::after {
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: 0;
+
+              width: 100%;
+              height: 100%;
+
+              content: "";
+
+              border-radius: 4px;
+              background: #0d65d9;
+            }
+
+            .header__link span {
+              margin: 0;
+              margin-left: 5px;
+
+              font-size: 10px;
+              font-weight: normal;
+            }
+
+            .header__link strong {
+              letter-spacing: 0.3px;
+
+              font-weight: normal;
+            }
+
+            .header__link:hover,
+            .header__link.active {
+              color: #fff;
+              background: transparent;
+              box-shadow: 0 0 20px rgba(13, 101, 217, 0.5);
+            }
+
+            .content {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              overflow: hidden;
+
+              max-height: calc(100vh - 220px);
+              padding: 40px 0;
+            }
+
+            .content__nav {
+              overflow: auto;
+              -ms-flex-preferred-size: 250px;
+              flex-basis: 250px;
+
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              min-width: 250px;
+              padding: 15px;
+              padding-left: 50px;
+
+              border-top-right-radius: 8px;
+              border-bottom-right-radius: 8px;
+              background: #f3f3f3;
+            }
+
+            .content__nav_item {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              -ms-flex-align: center;
+
+              margin: 5px 0;
+            }
+
+            .content__button {
+              padding: 5px 10px;
+            }
+
+            .content__button svg {
+              -webkit-transition: fill 0.2s ease-in-out;
+              -o-transition: fill 0.2s ease-in-out;
+              transition: fill 0.2s ease-in-out;
+
+              fill: #000;
+            }
+
+            .content__button:hover svg {
+              fill: #0d65d9;
+            }
+
+            .content__link {
+              position: relative;
+
+              padding: 3px 0;
+
+              -webkit-transition: 0.2s ease-in-out;
+              -o-transition: 0.2s ease-in-out;
+              transition: 0.2s ease-in-out;
+              text-decoration: none;
+
+              color: #000;
+              border-bottom: 1px solid transparent;
+
+              font-size: 16px;
+              font-weight: 300;
+            }
+
+            .content__link:hover,
+            .content__link.active {
+              color: #0d65d9;
+              border-color: #0d65d9;
+            }
+
+            .content__preview_wrap {
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              width: 100%;
+              max-width: 100%;
+              padding: 0 100px;
+            }
+
+            .content__preview {
+              -webkit-transform-origin: 0 0;
+              -ms-transform-origin: 0 0;
+              transform-origin: 0 0;
+
+              -webkit-box-shadow: 0 2px 30px rgba(100, 100, 100, 0.1);
+              box-shadow: 0 2px 30px rgba(100, 100, 100, 0.1);
+            }
+    </style>
   </head>
   <body>
-    <div
-      class="wrapper mainWrapper violet publicationPage"
-      data-page-type="publicationPage"
-      data-page-color="violet"
-    >
-      <header>
-        <div class="container">
-          <div class="menuWrapper">
-            <div class="top">
-              <a href="/" class="app_logo"></a>
-              <div class="closer">
-                <span class="second_background_color"></span>
-                <span class="second_background_color"></span>
-              </div>
-              <div class="subjects">
-                <span class="main_color">Выберите тематику:</span>
-                <div class="subjectsSelect js-spec-select disease">
-                  <div
-                    class="subjectsSelect__choosed second_background_color js-choosed"
-                  >
-                    Гемофилия А
-                  </div>
-                  <div class="subjectsSelect__list">
-                    <a
-                      href="/ingibitornaya-gemophilia-a/"
-                      data-id="14"
-                      class="subjectsSelect__item js-item disease-option"
-                    >
-                      Ингибиторная Гемофилия А
-                      <i class="second_background_color"></i
-                    ></a>
-                    <a
-                      href="/gemophilia-a/"
-                      data-id="49"
-                      class="subjectsSelect__item js-item disease-option active"
-                    >
-                      Гемофилия А <i class="second_background_color"></i
-                    ></a>
-                    <a
-                      href="/mnozhestvennaya-mieloma/"
-                      data-id="15"
-                      class="subjectsSelect__item js-item disease-option"
-                    >
-                      Множественная миелома
-                      <i class="second_background_color"></i
-                    ></a>
-                    <a
-                      href="/limfoma-khodzhkina/"
-                      data-id="16"
-                      class="subjectsSelect__item js-item disease-option"
-                    >
-                      CD 30+ лимфомы <i class="second_background_color"></i
-                    ></a>
-                  </div>
-                </div>
-                <button
-                  onclick="formQuestionPopupControl.openPopup('.form-header')"
-                  type="button"
-                  class="header-popup__button main_background_color header-popup__button-1"
-                >
-                  Обратная связь
-                </button>
-              </div>
-            </div>
-            <nav>
-              <a href="/gemophilia-a/"> Главная </a>
-              <a href="/gemophilia-a/publikatsii/" class="second_color">
-                Статьи и публикации
-              </a>
-              <a href="/gemophilia-a/video/"> Видео </a>
-              <a href="/gemophilia-a/therapy/"> Терапия </a>
-              <a href="/gemophilia-a/events/"> Мероприятия </a>
-              <button
-                onclick="formQuestionPopupControl.openPopup('.form-header')"
-                type="button"
-                class="header-popup__button main_background_color header-popup__button-2"
-              >
-                Обратная связь
-              </button>
-            </nav>
-          </div>
-        </div>
-        <div class="mobileNav">
-          <div class="burger">
-            <span class="main_background_color"></span>
-            <span class="main_background_color"></span>
-            <span class="main_background_color"></span>
-          </div>
-          <a href="/" class="app_logo"></a>
-          <div
-            class="searchIcon"
-            style="
-              background-image: url('https://t-helper.pro/gemophilia-a/publikatsii/diagnostika-gemofilii/');
-              background-size: contain;
-              background-position: center center;
-              background-repeat: no-repeat no-repeat;
-            "
-          ></div>
-        </div>
-      </header>
-
-      <div class="conet-wrapper">
-        <div
-          id="comp_711ff7e3cd62f2cfc447d25d125ba45a"
-          style="padding-bottom: 0px"
+    <header class="header">
+      <a href="http://elita.digital/" class="header__logo">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg
+          fill="none"
+          viewBox="0 0 688 97"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
         >
-          <div
-            class="app_breadcrumbs container"
-            itemscope=""
-            itemtype="http://schema.org/BreadcrumbList"
-          >
-            <div
-              itemprop="itemListElement"
-              itemscope=""
-              itemtype="http://schema.org/ListItem"
-            >
-              <a href="/" title="Главная" itemprop="item"
-                >Главная<meta itemprop="position" content="1" /><meta
-                  itemprop="name"
-                  content="Главная"
-              /></a>
-            </div>
-            <div
-              itemprop="itemListElement"
-              itemscope=""
-              itemtype="http://schema.org/ListItem"
-            >
-              <a href="/gemophilia-a/" title="Гемофилия А" itemprop="item"
-                >Гемофилия А<meta itemprop="position" content="2" /><meta
-                  itemprop="name"
-                  content="Гемофилия А"
-              /></a>
-            </div>
-            <div
-              itemprop="itemListElement"
-              itemscope=""
-              itemtype="http://schema.org/ListItem"
-            >
-              <a
-                href="/gemophilia-a/publikatsii/"
-                onclick="BX.ajax.insertToNode('/gemophilia-a/publikatsii/?bxajaxid=711ff7e3cd62f2cfc447d25d125ba45a', 'comp_711ff7e3cd62f2cfc447d25d125ba45a'); return false;"
-                title="Публикации"
-                itemprop="item"
-                >Публикации<meta itemprop="position" content="3" /><meta
-                  itemprop="name"
-                  content="Публикации"
-              /></a>
-            </div>
-            <div
-              itemprop="itemListElement"
-              itemscope=""
-              itemtype="http://schema.org/ListItem"
-            >
-              <a title="Статьи и обзоры" itemprop="item"
-                >Статьи и обзоры<meta itemprop="position" content="4" /><meta
-                  itemprop="name"
-                  content="Статьи и обзоры"
-              /></a>
-            </div>
-          </div>
-          <section class="app_publication">
-            <div class="container">
-              <div class="back-to-list">
-                <a
-                  href="/gemophilia-a/publikatsii/"
-                  onclick="BX.ajax.insertToNode('/gemophilia-a/publikatsii/?bxajaxid=711ff7e3cd62f2cfc447d25d125ba45a', 'comp_711ff7e3cd62f2cfc447d25d125ba45a'); return false;"
-                  class="main_background_color"
-                  >Возврат к списку</a
-                >
-              </div>
-            </div>
-          </section>
-          <section class="app_publication title">
-            <div class="container">
-              <time class="margin_bottom-32">23 ДЕКАБРЬ 2020</time>
-            </div>
-          </section>
-
-          <!-- calc-publication - Start -->
-          <section class="app_publication calc-publication">
-            <div class="container">
-              <div
-                class="calc-publication__banner"
-                style="background-image: url('assets/banner.jpg')"
-              >
-                <h2>
-                  <span>Калькулятор</span> показателя хрупкости при миеломе
-                </h2>
-                <span>
-                  Разработан Международной Рабочей Группой по Миеломе для оценки
-                  прогноза у пожилых пациентов с миеломой
-                </span>
-                <a href="#" class="calc-publication__button js-calc-open"
-                  >Калькулятор</a
-                >
-              </div>
-              <p>
-                Система оценки (от 0 до 5), основанная на возрасте,
-                сопутствующих заболеваниях, когнитивных и физических состояниях,
-                разработана Палумбо А. (Palumbo A.) и соавт.1 и определяет 5
-                групп пациентов:
-              </p>
-              <div class="calc-publication__list">
-                <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">0</span>
-                  <span>«в хорошей физической форме»</span>
-                </div>
-                <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">1</span>
-                  <span>«в средней физической форме»</span>
-                </div>
-                <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">
-                    2 <span>и более</span>
-                  </span>
-                  <span>«в ослабленном состоянии»</span>
-                </div>
-              </div>
-              <p class="large">
-                Показатель 5-летней выживаемости составлял 84 % у пациентов «в
-                хорошей физической форме», 76 % у пациентов «в средней
-                физической форме» (ОР 1,61; 95 % ДИ 1,02–2,56; p = 0,042) и 57 %
-                у пациентов «в ослабленном состоянии» (ОР 3,57; 95 % ДИ
-                2,37–5,39; p < 0,001).
-              </p>
-              <p>
-                Совокупная частота негематологических нежелательных явлений ≥3
-                степени через 12 месяцев составляла 22,2% у пациентов «в хорошей
-                физической форме», 26,4% у пациентов «в средней физической
-                форме» (ОР 1,23; 95% ДИ 0,89–1,71; p = 0,217) и 34,0 % (ОР 1,74;
-                95 % ДИ 1,28–2,38; p < 0,001) у пациентов «в ослабленном
-                состоянии» . Совокупная частота досрочного прекращения лечения
-                через 12 месяцев составляла 16,5% у у пациентов «в хорошей
-                физической форме», 20,8% у пациентов «в средней физической
-                форме» (ОР 1,41; 95 % ДИ 1,00–2,01; p = 0,052) и 31,2% (ОР 2,21;
-                95% ДИ 1,57–3,09; p < 0,001) у пациентов «в ослабленном
-                состоянии». Показатель «хрупкости» прогнозирует смертность и
-                риск токсических эффектов у пожилых пациентов с миеломой.
-                Международная Рабочая Группа по Миеломе предлагает использовать
-                этот показатель для оценки «хрупкости» в процессе принятия
-                решения о лечении и в разработке дизайна клинических
-                исследований в будущем.
-              </p>
-              <a href="#" class="calc-publication__button js-calc-open"
-                >Калькулятор</a
-              >
-            </div>
-          </section>
-          <!-- calc-publication - End -->
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="footer-mask"></div>
-        <div class="new-container">
-          <div class="top-container">
-            <div class="footer-left">
-              <div class="footer-left-top">
-                <a href="/">
-                  <img
-                    src="https://t-helper.pro/assets/img/footer/cancel-footer-logo.svg"
-                    alt="Логотип CancelR"
-                  />
-                </a>
-                <button
-                  class="footer-button"
-                  onclick="formQuestionPopupControl.openPopup('.form-header')"
-                  type="button"
-                >
-                  Обратная связь
-                </button>
-              </div>
-              <div class="footer-left-bottom">
-                <p>Правовая информация</p>
-                <a
-                  class="underline"
-                  href="/docs/14fd70120d007aaa.pdf"
-                  target="_blank"
-                  >Политика обработки персональных данных</a
-                >
-                <a
-                  class="underline"
-                  href="/docs/eba70598bbdd1d88.pdf"
-                  target="_blank"
-                  >Пользовательское соглашение</a
-                >
-              </div>
-            </div>
-            <div class="footer-right">
-              <a href="https://www.takeda.com/ru-ru">
-                <img
-                  src="https://t-helper.pro/assets/img/takeda_logo.svg"
-                  alt="Логотип Такеда"
-                />
-              </a>
-              <p>©&nbsp;Takeda, 2020. Все права защищены.</p>
-              <p>
-                119048&nbsp;Москва, ул. Усачёва дом&nbsp;2, стр.1, Бизнес-центр
-                «Фьюжн Парк».
-              </p>
-              <p>RU/ADC/0620/0065 Июнь 2020</p>
-            </div>
-          </div>
-          <p class="footer-bottom">
-            Владельцем сайта t-helper.pro является ООО «Такеда Фармасьютикалс».
-            Заявление о нарушении авторских и смежных прав может быть отправлено
-            по адресу
-            <a class="underline" href="mailto:russia@takeda.com" target="_blank"
-              >russia@takeda.com</a
-            >
-          </p>
-        </div>
-      </footer>
-    </div>
-
-    <!-- calc-popup - Start -->
-    <section class="calc-popup">
-      <div class="calc-popup__container">
-        <div class="calc-popup__body">
-          <div class="calc-popup__header">
-            <img
-              src="https://t-helper.pro/assets/img/nav_logo_blue.svg"
-              alt=""
-              class="calc-popup__logo"
+          <clipPath id="a"><path d="m0 0h688v97h-688z" /></clipPath>
+          <g clip-path="url(#a)">
+            <g fill="#0097dc">
+              <path
+                d="m236.865 0h-35.47c-1.971 0-3.022 1.18937-3.022 3.30381v41.89239 48.5c0 2.1144 1.051 3.3038 3.022 3.3038h13.268 21.94c2.102 0 3.284-1.0572 3.284-3.1717v-7.6648c0-1.8502-1.182-2.9074-3.284-2.9074h-21.94v-27.752h22.071c2.102 0 3.153-1.0572 3.153-3.0395v-7.6649c0-1.9823-1.051-3.0395-3.153-3.0395h-22.071v-28.0163h22.071c2.102 0 3.153-1.0573 3.153-3.0395v-7.66489c.131-1.98229-.92-3.03951-3.022-3.03951z"
+              />
+              <path
+                d="m287.575 83.2561h-19.837v-79.95229c0-2.11444-1.051-3.30381-3.022-3.30381h-10.509c-1.971 0-3.022 1.18937-3.022 3.30381v90.39239c0 2.1144.788 3.3038 2.496 3.3038h33.763c2.102 0 3.153-1.0572 3.153-3.1717v-7.6648c0-1.1894-.263-1.8502-.657-2.2466-.394-.5286-1.314-.6608-2.365-.6608z"
+              />
+              <path
+                d="m312.668 0h-10.379c-1.97 0-3.021 1.18937-3.021 3.30381v90.39239c0 2.1144 1.051 3.3038 3.021 3.3038h10.379c1.97 0 3.021-1.1894 3.021-3.3038v-90.39239c0-2.11444-1.051-3.30381-3.021-3.30381z"
+              />
+              <path
+                d="m369.683 0h-42.433c-1.97 0-3.021 1.05722-3.021 3.03951v7.66489c0 1.9822 1.051 3.0395 3.021 3.0395h13.006v79.9523c0 2.1144 1.051 3.3038 3.022 3.3038h10.509c1.84 0 2.891-1.1894 2.891-3.3038v-79.9523h13.005c2.102 0 3.153-1.0573 3.153-3.0395v-7.66489c0-1.98229-1.051-3.03951-3.153-3.03951z"
+              />
+              <path
+                d="m413.43 3.17166c-.394-2.11444-1.707-3.17166-3.809-3.17166h-.395-10.509c-2.234 0-3.547 1.05722-3.942 3.17166l-19.049 90.65664c-.394 2.1145.263 3.1717 2.234 3.1717h9.59c1.971 0 3.284-1.0572 3.678-3.1717l3.547-19.6907h7.751 9.853l3.679 19.6907c.394 2.1145 1.576 3.1717 3.416 3.1717h10.509c2.102 0 3.022-1.0572 2.496-3.1717zm-10.772 57.61854h-5.255l3.678-18.7657c.526-2.643 1.051-5.9468 1.577-9.515.394-2.9073.788-5.9468 1.182-9.3828 1.051 9.7793 1.971 16.2548 2.496 19.2943l3.679 18.5013h-7.357z"
+              />
+            </g>
+            <path
+              d="m467.425 17.5762h-10.116v61.8474h10.116c6.963 0 10.51-2.9074 10.51-8.5899v-44.6676c0-5.6826-3.547-8.5899-10.51-8.5899z"
+              fill="#405464"
             />
-            <a href="#" class="calc-popup__close js-calc-close"></a>
-          </div>
-          <div class="calc-popup__steps">
-            <form
-              action="#"
-              class="calc-popup__step calc-popup__charlson active"
-            >
-              <span class="calc-popup__title">
-                Калькулятор показателя хрупкости при миеломе
-              </span>
-              <span class="calc-popup__subtitle">
-                Оценка гериатрических пациентов
-              </span>
-              <span class="calc-popup__step-label">
-                01. Введите дату рождения пациента:
-              </span>
-              <div class="calc-popup__inputs">
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="day"
-                  placeholder="день"
-                />
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="month"
-                  placeholder="месяц"
-                />
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="year"
-                  placeholder="год"
-                />
-              </div>
-              <span class="calc-popup__step-label">
-                02. Оценка наличия сопутствующих заболеваний при расчете индекса
-                коморбидности Чарлсона (Charlson) и соавт.
-              </span>
-              <span class="calc-popup__span">
-                Отметьте, пожалуйста, имеющиеся заболевания:
-              </span>
-
-              <div class="calc-popup__step-content"></div>
-
-              <div class="calc-popup__step-value">
-                <span>Индекс коморбидности Чарлсона:</span>
-                <span class="calc-popup__step-value-box">0</span>
-              </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i></i>
-                  <i></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </form>
-            <form action="#" class="calc-popup__step calc-popup__activity">
-              <span class="calc-popup__title">
-                Калькулятор показателя хрупкости при миеломе
-              </span>
-              <span class="calc-popup__subtitle">
-                Оценка гериатрических пациентов
-              </span>
-              <span class="calc-popup__step-label">
-                03. Оценка базовой повседневной активности Катц
-              </span>
-              <span class="calc-popup__span">
-                Отметьте, пожалуйста, имеющиеся заболевания:
-              </span>
-
-              <div class="calc-popup__step-content"></div>
-
-              <div class="calc-popup__step-value">
-                <span>Индекс базовой повседневной активности Катц:</span>
-                <span class="calc-popup__step-value-box">0</span>
-              </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i class="active"></i>
-                  <i></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </form>
-            <form action="#" class="calc-popup__step calc-popup__iadl">
-              <span class="calc-popup__title">
-                Калькулятор показателя хрупкости при миеломе
-              </span>
-              <span class="calc-popup__subtitle">
-                Оценка гериатрических пациентов
-              </span>
-              <span class="calc-popup__step-label">
-                04. Оценка инструментальной функциональной активности — шкала
-                Лоутона
-              </span>
-              <span class="calc-popup__span">
-                Выберите подходящий вариант ответа
-              </span>
-
-              <div class="calc-popup__step-content"></div>
-
-              <div class="calc-popup__step-value">
-                <span>Индекс Лоутона:</span>
-                <span class="calc-popup__step-value-box">8</span>
-              </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i class="active"></i>
-                  <i class="active"></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
-            </form>
-            <div class="calc-popup__step calc-popup__result">
-              <span class="calc-popup__title">Результат расчета:</span>
-              <div class="calc-popup__result-row">
-                <div class="calc-popup__result-content">
-                  <span class="calc-popup__result-circle" style="opacity: 1">
-                    0
-                  </span>
-                  <span>Пациент «в хорошей физической форме»</span>
-                </div>
-                <div class="calc-popup__result-buttons">
-                  <a
-                    href="https://t-helper.dokku.elita.digital/?t=1&c=6&cl=0000000000000000&a=0&al=111111&i=8&il=00000000"
-                    target="_blank"
-                    class="calc-popup__button js-calc-pdf"
-                  >
-                    PDF
-                  </a>
-                  <a href="#" class="calc-popup__button js-calc-reset">
-                    Новый гериатрический показатель
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            <path
+              d="m621.919 21.4092c-.788 5.4182-1.445 8.9864-1.839 10.7043l-5.649 26.0341h15.239l-6.043-26.0341c-1.051-4.361-1.576-7.9291-1.708-10.7043z"
+              fill="#405464"
+            />
+            <path
+              d="m681.431 0h-253.155c-.92 0-1.839.396458-2.365 1.18937-.525.79292-.788 1.71799-.657 2.64305l19.181 90.78878c.262 1.4537 1.576 2.5109 3.021 2.5109h234.107c3.678 0 6.568-2.9073 6.568-6.6076v-83.91687c-.131-3.70027-3.021-6.60763-6.7-6.60763zm-196.928 70.9659c0 9.3829-5.649 14.1404-17.078 14.1404h-15.502c-.788 0-1.182-.5286-1.182-1.4537v-70.3052c0-.9251.394-1.4537 1.313-1.4537h15.502c11.298 0 17.079 4.7575 17.079 14.1404v44.9318zm16.947 12.6867c0 .9251-.394 1.4537-1.445 1.4537h-3.809c-.92 0-1.446-.5286-1.446-1.4537v-70.3052c0-.9251.395-1.4537 1.446-1.4537h3.809c.92 0 1.445.5286 1.445 1.4537zm43.616-51.936c0 .9251-.525 1.4537-1.445 1.4537h-3.678c-.92 0-1.445-.5286-1.445-1.4537v-6.4755c0-5.6825-3.285-8.4577-9.985-8.4577s-10.115 2.7752-10.115 8.4577v46.5178c0 5.6825 3.284 8.4577 10.115 8.4577 6.7 0 9.985-2.7752 9.985-8.4577v-15.8584h-8.802c-.92 0-1.445-.3964-1.445-1.4536v-2.9074c0-.9251.394-1.4537 1.445-1.4537h13.794c1.051 0 1.576.3965 1.576 1.4537v20.2194c0 9.3828-5.517 14.1403-16.684 14.1403-11.035 0-16.553-4.7575-16.553-14.1403v-46.6499c0-9.3828 5.518-14.1403 16.553-14.1403 11.167 0 16.684 4.7575 16.684 14.1403zm16.29 51.936c0 .9251-.394 1.4537-1.445 1.4537h-3.809c-.92 0-1.446-.5286-1.446-1.4537v-70.3052c0-.9251.395-1.4537 1.446-1.4537h3.809c.92 0 1.445.5286 1.445 1.4537zm40.463-67.3978c0 .925-.394 1.3215-1.445 1.3215h-12.48v66.0763c0 .9251-.394 1.4537-1.314 1.4537h-3.941c-.92 0-1.445-.5286-1.445-1.4537v-66.0763h-12.612c-.92 0-1.445-.3965-1.445-1.3215v-3.0395c0-.9251.394-1.4537 1.445-1.4537h31.792c.92 0 1.445.3964 1.445 1.4537zm38.493 68.7193h-3.81c-.92 0-1.445-.3964-1.708-1.4537l-4.335-19.955h-17.342l-4.335 19.955c-.263.9251-.788 1.4537-1.576 1.4537h-3.679c-.919 0-1.314-.3964-1.051-1.4537l15.634-70.4373c.262-.9251.788-1.4537 1.707-1.4537h4.204c.92 0 1.577.3965 1.84 1.4537l15.502 70.4373c.262 1.0573-.132 1.4537-1.051 1.4537zm35.602-1.1894c0 .9251-.394 1.4537-1.445 1.4537h-25.75c-.788 0-1.182-.5286-1.182-1.4537v-70.4373c0-.9251.394-1.4537 1.445-1.4537h3.941c.92 0 1.314.5286 1.314 1.4537v66.0763h20.232c.919 0 1.445.3965 1.445 1.3215z"
+              fill="#405464"
+            />
+            <path
+              d="m106.149 1.85048c-.525-.925069-1.576-1.585832-2.627-1.585832h-100.36907c-1.05099 0-2.10197.528611-2.627464 1.585832-.52549126.92507-.52549126 2.11444 0 3.17166l9.984334 17.31196 4.8608 8.4578 8.802 15.1975 4.8608 8.4578 21.6765 37.9278c.5255.9251 1.5765 1.5858 2.6275 1.5858s2.1019-.5286 2.6274-1.5858l6.5687-11.3651 34.5511-60.2616 1.8392-3.3038.2627-.3965 6.9625-12.15801c.526-.92507.526-2.11444 0-3.03951zm-59.7744 52.59672-4.8608-8.4578h23.6471l-5.7804 10.0436-6.0431 10.5722zm36.1276-38.7207-.1314.1322-.9196 1.5858-7.6196 13.2152h-41.1198l-4.8608-8.4577-3.8098-6.7398h58.5923z"
+              fill="#0097dc"
+            />
+            <path
+              d="m173.412 92.3746-21.676-37.9278-4.861-8.4578-8.933-15.3297-4.861-8.4578-9.853-17.31196c-.526-.92507-1.577-1.58583-2.628-1.58583s-2.102.52861-2.627 1.58583l-9.984 17.31196-2.234 3.8325-22.0704 38.3242-16.0275 28.0164c-.5255.925-.5255 2.1144 0 3.1716.5254.9251 1.5764 1.5858 2.6274 1.5858h100.3685c1.051 0 2.102-.5286 2.628-1.5858.525-1.0572.657-2.2466.131-3.1716zm-82.2392-10.5722 9.9842-17.4442 3.022-5.2861c.131-.1321.131-.2643.262-.5286l15.634-27.8842h.394l8.802 15.1975 4.861 8.4578 15.633 27.4878z"
+              fill="#405464"
+            />
+          </g>
+        </svg>
+      </a>
+      <nav class="header__nav"></nav>
+    </header>
+    <section class="content">
+      <nav class="content__nav"></nav>
+      <div class="content__preview_wrap">
+        <iframe class="content__preview" frameborder="0"></iframe>
       </div>
-      <a href="#" class="calc-popup__background js-calc-close"></a>
     </section>
-    <!-- calc-popup - End -->
+    <script>
+      // 2. Set pages to show
+      let pages = [
+        { name: "Калькулятор", src: "calc.html" },
+        { name: "Карта", src: "map.html" },
+      ];
 
-    <script src="js/calc.js"></script>
+      let views = [
+        { name: "Mobile", size: 320 },
+        { name: "Tablet", size: 768 },
+        { name: "Desktop", size: 1368 },
+        { name: "Desktop HD", size: 1600 },
+        { name: "Desktop HD", size: 1920 },
+      ];
+
+      const containerWidth =
+        document.querySelector(".content__preview_wrap").offsetWidth - 200;
+
+      if (window.innerWidth < 1024) window.location = pages[0].src;
+
+      pages.forEach((page) => {
+        document
+          .querySelector(".content__nav")
+          .insertAdjacentHTML(
+            "beforeend",
+            '<div class="content__nav_item"><a href="' +
+              page.src +
+              '" target="_blank" class="content__button"><svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 52.974 52.974"><path d="M49.467 3.51c-4.677-4.679-12.291-4.681-16.97 0l-9.192 9.192a.999.999 0 1 0 1.414 1.414l9.192-9.192a9.927 9.927 0 0 1 7.07-2.915c2.681 0 5.191 1.036 7.071 2.916s2.916 4.391 2.916 7.071c0 2.68-1.036 5.19-2.916 7.07L36.033 31.088c-3.898 3.898-10.244 3.898-14.143 0a.999.999 0 1 0-1.414 1.414c2.34 2.339 5.412 3.509 8.485 3.509s6.146-1.17 8.485-3.509L49.467 20.48a11.914 11.914 0 0 0 3.502-8.485c0-3.214-1.244-6.227-3.502-8.485z"/><path d="M26.84 40.279l-7.778 7.778a9.928 9.928 0 0 1-7.071 2.916 9.93 9.93 0 0 1-7.071-2.916c-3.898-3.898-3.898-10.243 0-14.142l11.314-11.314c3.899-3.898 10.244-3.896 14.142 0a.999.999 0 1 0 1.414-1.414c-4.677-4.679-12.291-4.681-16.97 0L3.505 32.502a11.914 11.914 0 0 0-3.501 8.485c0 3.214 1.244 6.227 3.502 8.484s5.271 3.502 8.484 3.502c3.215 0 6.228-1.244 8.485-3.502l7.778-7.778a.999.999 0 1 0-1.413-1.414z"/></svg></a><a href="#" class="content__link" data-value="' +
+              page.src +
+              '">' +
+              page.name +
+              "</a></div>"
+          );
+      });
+
+      views.forEach((view) => {
+        document
+          .querySelector(".header__nav")
+          .insertAdjacentHTML(
+            "beforeend",
+            '<a href="#" class="header__link" data-value="' +
+              view.size +
+              '"><strong>' +
+              view.name +
+              "</strong><span>" +
+              view.size +
+              "px</span></a>"
+          );
+      });
+
+      let state = { page: pages[0].src, view: views[views.length - 1].size };
+      document
+        .querySelector('.content__link[data-value="' + pages[0].src + '"]')
+        .classList.add("active");
+      document
+        .querySelector(
+          '.header__link[data-value="' + views[views.length - 1].size + '"]'
+        )
+        .classList.add("active");
+      setPage();
+      setView();
+
+      document.querySelectorAll(".content__link").forEach((item) => {
+        item.onclick = (e) => {
+          e.preventDefault();
+          setPage(item.dataset.value);
+          document.querySelectorAll(".content__link").forEach((i) => {
+            i.classList.remove("active");
+          });
+          item.classList.add("active");
+        };
+      });
+
+      document.querySelectorAll(".header__link").forEach((item) => {
+        item.onclick = (e) => {
+          e.preventDefault();
+          setView(item.dataset.value);
+          document.querySelectorAll(".header__link").forEach((i) => {
+            i.classList.remove("active");
+          });
+          item.classList.add("active");
+        };
+      });
+
+      function setPage(page = state.page) {
+        state.page = page;
+        document.querySelector(".content__preview").src = page;
+      }
+
+      function setView(view = state.view) {
+        state.view = view;
+        document.querySelector(".content__preview").width = view;
+        if (containerWidth < view)
+          document.querySelector(".content__preview").style =
+            "transform: scale(" +
+            containerWidth / view +
+            "); height: " +
+            (window.innerHeight - 220) / (containerWidth / view) +
+            "px;";
+        else
+          document.querySelector(".content__preview").style =
+            "transform: scale(1); height: " +
+            (window.innerHeight - 220) +
+            "px;";
+        setPage();
+      }
+    </script>
   </body>
 </html>

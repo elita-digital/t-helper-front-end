@@ -1,67 +1,5 @@
 let DATA;
 
-class Select {
-  constructor($selectWrap) {
-    const $select = $selectWrap.querySelector(".calc-popup__select");
-    const $value = $selectWrap.querySelector(".calc-popup__select-value");
-    const $native = $selectWrap.querySelector("select");
-    const $options = Array.from($selectWrap.querySelectorAll("option"));
-
-    let listHtml = '<div class="calc-popup__select-list">';
-    $options.forEach(($option) => {
-      listHtml += `<a href="#" class="calc-popup__select-item" data-value="${$option.value}">${$option.innerText}</a>`;
-    });
-    listHtml += "</div>";
-
-    $selectWrap.insertAdjacentHTML("beforeend", listHtml);
-
-    const $list = $selectWrap.querySelector(".calc-popup__select-list");
-    const $items = Array.from(
-      $selectWrap.querySelectorAll(".calc-popup__select-item")
-    );
-
-    $select.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      $list.classList.add("active");
-      $select.classList.add("active");
-    });
-
-    $items.forEach(($item) => {
-      $item.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        $list.classList.remove("active");
-        $select.classList.remove("active");
-
-        $native.value = $item.dataset.value;
-
-        $native.dispatchEvent(new Event("change"));
-      });
-    });
-
-    $native.addEventListener("change", (e) => {
-      if (e.target.value) {
-        $select.classList.add("has-value");
-        $value.innerText = e.target.querySelector(
-          `option:nth-child(${e.target.selectedIndex + 1})`
-        ).innerText;
-      } else {
-        $select.classList.remove("has-value");
-        $value.innerText = "";
-      }
-    });
-  }
-
-  static initAll() {
-    const $selects = Array.from(
-      document.querySelectorAll(".calc-popup__select-wrap")
-    );
-
-    $selects.forEach(($selectWrap) => new Select($selectWrap));
-  }
-}
-
 class Calculate {
   static all(
     birthday,
@@ -288,7 +226,7 @@ class Calculator {
     });
 
     DATA.iadl.forEach((item, i) => {
-      let html = `<div class="calc-popup__select-wrap"><div class="calc-popup__select"><span class="calc-popup__select-label">${item.title}*</span><span class="calc-popup__select-value"></span></div><select name="iadl-${i}">`;
+      let html = `<div class="select__wrap"><div class="select"><span class="select__label">${item.title}*</span><span class="select__value"></span></div><select name="iadl-${i}">`;
 
       item.answers.forEach((answer, j) => {
         html += `<option value="${j}">${answer.label}</option>`;
@@ -303,7 +241,11 @@ class Calculator {
     this.$activityContent.innerHTML = activityContentHtml;
     this.$iadlContent.innerHTML = iadlContentHtml;
 
-    Select.initAll();
+    Array.from(this.$iadlContent.querySelectorAll(".select__wrap")).forEach(
+      ($select) => {
+        new Select($select);
+      }
+    );
   }
 
   open() {
@@ -423,7 +365,7 @@ class Calculator {
 }
 
 async function bootstrap() {
-  DATA = await fetch("data.json").then((data) => data.json());
+  DATA = await fetch("assets/calc.json").then((data) => data.json());
 
   new Calculator();
 }
