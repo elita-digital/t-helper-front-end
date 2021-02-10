@@ -53,6 +53,14 @@
   color: #ef7622;
 }
 
+.select.select--error {
+  border-color: red;
+}
+
+.select.select--error .select__label {
+  color: red;
+}
+
 .select__label {
   position: absolute;
   top: 10px;

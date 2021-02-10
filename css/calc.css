@@ -394,6 +394,14 @@
   opacity: 0;
 }
 
+.calc-popup__input.calc-popup__input--error {
+  border-color: red;
+}
+
+.calc-popup__input.calc-popup__input--error::placeholder {
+  color: red;
+}
+
 .calc-popup__step-footer {
   display: block;
 
@@ -505,6 +513,10 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
+}
+
+.calc-popup__checkbox-title.calc-popup__checkbox-title--error {
+  color: red;
 }
 
 .calc-popup__checkbox-descr {

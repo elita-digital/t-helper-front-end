@@ -276,40 +276,64 @@ class Calculator {
     const $currentStep = this.$popup.querySelector(".calc-popup__step.active");
     const $nextStep = $currentStep.nextElementSibling;
 
-    let hasInputsWithoutValue = false;
-    const $inputs = Array.from(
-      $currentStep.querySelectorAll("input[type=text]")
-    );
-    const $radios = Array.from(
-      $currentStep.querySelectorAll("input[type=radio]")
-    );
-    const $selects = Array.from(
-      $currentStep.querySelectorAll(".select__value")
-    );
-
-    $inputs.forEach(($input) => {
-      const value = Number($input.value);
-
-      if (isNaN(value)) hasInputsWithoutValue = true;
-    });
-
-    $radios.forEach(($radio) => {
-      const name = $radio.name;
-      const $checkedRadio = $currentStep.querySelector(
-        `input[name=${name}]:checked`
-      );
-
-      if (!$checkedRadio) hasInputsWithoutValue = true;
-    });
-
-    $selects.forEach(($select) => {
-      if ($select.innerText.length === 0) hasInputsWithoutValue = true;
-    });
+    const hasInputsWithoutValue = this.validateStep($currentStep);
 
     if (!hasInputsWithoutValue) {
       $currentStep.classList.remove("active");
       $nextStep.classList.add("active");
     }
+  }
+
+  validateStep($currentStep) {
+    let hasInputsWithoutValue = false;
+
+    const $inputs = Array.from(
+      $currentStep.querySelectorAll(".calc-popup__input")
+    );
+    const $radios = Array.from(
+      $currentStep.querySelectorAll(".calc-popup__checkbox-wrap")
+    );
+    const $selects = Array.from($currentStep.querySelectorAll(".select"));
+
+    $inputs.forEach(($input) => {
+      const value = Number($input.value);
+
+      $input.classList.remove("calc-popup__input--error");
+
+      if (isNaN(value) || value === 0) {
+        hasInputsWithoutValue = true;
+        $input.classList.add("calc-popup__input--error");
+      }
+    });
+
+    $radios.forEach(($radioWrap) => {
+      const $title = $radioWrap.querySelector(".calc-popup__checkbox-title");
+      const $radio = $radioWrap.querySelector("input");
+      const name = $radio.name;
+      const $checkedRadio = $currentStep.querySelector(
+        `input[name=${name}]:checked`
+      );
+
+      $title.classList.remove("calc-popup__checkbox-title--error");
+
+      if (!$checkedRadio) {
+        hasInputsWithoutValue = true;
+        $title.classList.add("calc-popup__checkbox-title--error");
+      }
+    });
+
+    $selects.forEach(($select) => {
+      const value = $select.querySelector(".select__value").innerText;
+
+      $select.classList.remove("select--error");
+
+      if (value.length === 0) {
+        hasInputsWithoutValue = true;
+        $select.classList.add("select--error");
+      }
+    });
+
+    return hasInputsWithoutValue;
   }
 
   recalc() {
