@@ -344,6 +344,10 @@
   line-height: 22px;
 }
 
+.calc-popup__step-label.calc-popup__step-label--error {
+  color: red;
+}
+
 .calc-popup__span {
   display: block;
 
@@ -412,7 +416,7 @@
   line-height: 25px;
 }
 
-.calc-popup__arrows {
+.calc-popup__nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -459,6 +463,8 @@
   width: 17px;
   height: 17px;
   margin: 5px;
+
+  cursor: pointer;
 
   border-radius: 50%;
   background: #c4c4c4;

@@ -85,11 +85,19 @@ class Calculate {
 class Calculator {
   constructor() {
     this.$popup = document.querySelector(".calc-popup");
+    this.$popupBody = document.querySelector(".calc-popup__body");
 
     this.$openLinks = Array.from(document.querySelectorAll(".js-calc-open"));
     this.$closeLinks = Array.from(document.querySelectorAll(".js-calc-close"));
     this.$resetLinks = Array.from(document.querySelectorAll(".js-calc-reset"));
-    this.$nextLinks = Array.from(document.querySelectorAll(".js-calc-next"));
+
+    this.currentStep = 0;
+    this.$nav = document.querySelector(".calc-popup__nav");
+    this.$dots = Array.from(document.querySelectorAll(".js-calc-dots i"));
+    this.$prevLink = document.querySelector(".js-calc-prev");
+    this.$nextLink = document.querySelector(".js-calc-next");
+
+    this.$steps = Array.from(document.querySelectorAll(".calc-popup__step"));
 
     this.$charlsonStep = document.querySelector(".calc-popup__charlson");
     this.$charlsonContent = this.$charlsonStep.querySelector(
@@ -166,20 +174,32 @@ class Calculator {
       });
     });
 
-    this.$nextLinks.forEach(($nextLink) => {
-      $nextLink.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        this.next();
-      });
-    });
-
     this.$resetLinks.forEach(($resetLink) => {
       $resetLink.addEventListener("click", (e) => {
         e.preventDefault();
 
         this.reset();
       });
+    });
+
+    this.$dots.forEach(($dot, i) => {
+      $dot.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        this.setStep(i);
+      });
+    });
+
+    this.$prevLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      this.setStep(this.currentStep - 1);
+    });
+
+    this.$nextLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      this.setStep(this.currentStep + 1);
     });
   }
 
@@ -268,20 +288,50 @@ class Calculator {
       $select.dispatchEvent(new Event("change"));
     });
 
+    this.$nav.classList.remove("hidden");
+
     this.$result.classList.remove("active");
     this.$charlsonStep.classList.add("active");
   }
 
-  next() {
-    const $currentStep = this.$popup.querySelector(".calc-popup__step.active");
-    const $nextStep = $currentStep.nextElementSibling;
+  setStep(newStep) {
+    const currentStep = this.$steps.findIndex(($step) =>
+      $step.classList.contains("active")
+    );
+    const $currentStep = this.$steps[currentStep];
+    const $newStep = this.$steps[newStep];
 
-    const hasInputsWithoutValue = this.validateStep($currentStep);
+    // Нельзя перемещаться пропускать шаги
+    if (newStep > currentStep + 1) return;
 
-    if (!hasInputsWithoutValue) {
-      $currentStep.classList.remove("active");
-      $nextStep.classList.add("active");
+    // При переходе на след. шаг валидировать текущий
+    if (newStep === currentStep + 1) {
+      const [isValid, $firstElementWithError] = this.validateStep($currentStep);
+
+      if (!isValid) return $firstElementWithError.scrollIntoView();
     }
+
+    if (newStep === 0) this.$prevLink.classList.add("disabled");
+    else this.$prevLink.classList.remove("disabled");
+
+    if (newStep === this.$steps.length - 1)
+      this.$nextLink.classList.add("disabled");
+    else this.$nextLink.classList.remove("disabled");
+
+    this.$dots.forEach(($dot, i) => {
+      if (i <= newStep) $dot.classList.add("active");
+      else $dot.classList.remove("active");
+    });
+
+    if ($newStep.classList.contains("calc-popup__result")) {
+      this.$nav.classList.add("hidden");
+    }
+
+    $currentStep.classList.remove("active");
+    $newStep.classList.add("active");
+
+    this.$popupBody.scrollIntoView();
+    this.currentStep = newStep;
   }
 
   validateStep($currentStep) {
@@ -297,12 +347,16 @@ class Calculator {
 
     $inputs.forEach(($input) => {
       const value = Number($input.value);
+      const $wrap = $input.closest(".calc-popup__inputs-wrap");
+      const $label = $wrap.querySelector(".calc-popup__step-label");
 
       $input.classList.remove("calc-popup__input--error");
+      $label.classList.remove("calc-popup__step-label--error");
 
       if (isNaN(value) || value === 0) {
         hasInputsWithoutValue = true;
         $input.classList.add("calc-popup__input--error");
+        $label.classList.add("calc-popup__step-label--error");
       }
     });
 
@@ -333,7 +387,13 @@ class Calculator {
       }
     });
 
-    return hasInputsWithoutValue;
+    const $firstElementWithError = $currentStep.querySelector(
+      ".calc-popup__step-label--error, .calc-popup__checkbox-title--error, .select--error"
+    );
+
+    const isValid = !hasInputsWithoutValue;
+
+    return [isValid, $firstElementWithError];
   }
 
   recalc() {
@@ -411,10 +471,8 @@ class Calculator {
       `&a=${basicActivity}` +
       `&al=${basicActivityAnswers.join("")}` +
       `&i=${IADL}` +
-      `&il=${IADLAnswers.join("")}`;
-
-    if (birthday.day && birthday.month && birthday.year)
-      pdfLink += `&b=${birthday.day}.${birthday.month}.${birthday.year}`;
+      `&il=${IADLAnswers.join("")}` +
+      `&b=${birthday.day}.${birthday.month}.${birthday.year}`;
 
     this.$pdfLink = pdfLink;
   }

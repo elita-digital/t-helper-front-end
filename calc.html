@@ -215,8 +215,8 @@
               <p>
                 Система оценки (от 0 до 5), основанная на возрасте,
                 сопутствующих заболеваниях, когнитивных и физических состояниях,
-                разработана Палумбо А. (Palumbo A.) и соавт.1 и определяет 5
-                групп пациентов:
+                разработана Палумбо А. (Palumbo A.) и соавт.<sup>1</sup> и
+                определяет 3 группы пациентов:
               </p>
               <div class="calc-publication__list">
                 <div class="calc-publication__item">
@@ -235,11 +235,11 @@
                 </div>
               </div>
               <p class="large">
-                Показатель 5-летней выживаемости составлял 84 % у пациентов «в
-                хорошей физической форме», 76 % у пациентов «в средней
-                физической форме» (ОР 1,61; 95 % ДИ 1,02–2,56; p = 0,042) и 57 %
-                у пациентов «в ослабленном состоянии» (ОР 3,57; 95 % ДИ
-                2,37–5,39; p < 0,001).
+                Показатель 5-летней общей выживаемости составлял 84 % у
+                пациентов «в хорошей физической форме», 76 % у пациентов «в
+                средней физической форме» (ОР 1,61; 95 % ДИ 1,02–2,56; p =
+                0,042) и 57 % у пациентов «в ослабленном состоянии» (ОР 3,57; 95
+                % ДИ 2,37–5,39; p < 0,001).
               </p>
               <p>
                 Совокупная частота негематологических нежелательных явлений ≥3
@@ -258,6 +258,13 @@
                 этот показатель для оценки «хрупкости» в процессе принятия
                 решения о лечении и в разработке дизайна клинических
                 исследований в будущем.
+              </p>
+              <p>
+                <sup>1</sup>Палумбо А., Бринген С., Матеос М.В. и др.
+                Гериатрическая оценка позволяет прогнозировать выживаемость и
+                токсичность у пожилых пациентов с миеломой: отчет Международной
+                рабочей группы по миеломе. Кровь. 2015 26 марта; 125 (13):
+                2068-7
               </p>
               <a href="#" class="calc-publication__button js-calc-open"
                 >Калькулятор</a
@@ -354,28 +361,30 @@
               <span class="calc-popup__subtitle">
                 Оценка гериатрических пациентов
               </span>
-              <span class="calc-popup__step-label">
-                01. Введите дату рождения пациента:
-              </span>
-              <div class="calc-popup__inputs">
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="day"
-                  placeholder="день"
-                />
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="month"
-                  placeholder="месяц"
-                />
-                <input
-                  type="text"
-                  class="calc-popup__input"
-                  name="year"
-                  placeholder="год"
-                />
+              <div class="calc-popup__inputs-wrap">
+                <span class="calc-popup__step-label">
+                  01. Введите дату рождения пациента:
+                </span>
+                <div class="calc-popup__inputs">
+                  <input
+                    type="text"
+                    class="calc-popup__input"
+                    name="day"
+                    placeholder="день"
+                  />
+                  <input
+                    type="text"
+                    class="calc-popup__input"
+                    name="month"
+                    placeholder="месяц"
+                  />
+                  <input
+                    type="text"
+                    class="calc-popup__input"
+                    name="year"
+                    placeholder="год"
+                  />
+                </div>
               </div>
               <span class="calc-popup__step-label">
                 02. Оценка наличия сопутствующих заболеваний при расчете индекса
@@ -391,22 +400,6 @@
                 <span>Индекс коморбидности Чарлсона:</span>
                 <span class="calc-popup__step-value-box">0</span>
               </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i></i>
-                  <i></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
             </form>
             <form action="#" class="calc-popup__step calc-popup__activity">
               <span class="calc-popup__title">
@@ -428,22 +421,6 @@
                 <span>Индекс базовой повседневной активности Катц:</span>
                 <span class="calc-popup__step-value-box">0</span>
               </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i class="active"></i>
-                  <i></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
             </form>
             <form action="#" class="calc-popup__step calc-popup__iadl">
               <span class="calc-popup__title">
@@ -466,22 +443,6 @@
                 <span>Индекс Лоутона:</span>
                 <span class="calc-popup__step-value-box">8</span>
               </div>
-              <div class="calc-popup__arrows">
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--prev disabled"
-                ></a>
-                <div class="calc-popup__dots">
-                  <i class="active"></i>
-                  <i class="active"></i>
-                  <i class="active"></i>
-                </div>
-                <a
-                  href="#"
-                  class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
-                ></a>
-              </div>
-              <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
             </form>
             <div class="calc-popup__step calc-popup__result">
               <span class="calc-popup__title">Результат расчета:</span>
@@ -507,6 +468,22 @@
               </div>
             </div>
           </div>
+          <div class="calc-popup__nav">
+            <a
+              href="#"
+              class="calc-popup__arrow calc-popup__arrow--prev js-calc-prev disabled"
+            ></a>
+            <div class="calc-popup__dots js-calc-dots">
+              <i class="active"></i>
+              <i></i>
+              <i></i>
+            </div>
+            <a
+              href="#"
+              class="calc-popup__arrow calc-popup__arrow--next js-calc-next"
+            ></a>
+          </div>
+          <span class="calc-popup__step-footer">C-APROM/RU/NINL/0019</span>
         </div>
       </div>
       <a href="#" class="calc-popup__background js-calc-close"></a>
