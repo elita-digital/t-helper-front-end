@@ -15,9 +15,9 @@
   </head>
   <body>
     <div
-      class="wrapper mainWrapper violet publicationPage"
+      class="wrapper mainWrapper blue publicationPage"
       data-page-type="publicationPage"
-      data-page-color="violet"
+      data-page-color="blue"
     >
       <header>
         <div class="container">
@@ -189,22 +189,57 @@
 
           <section class="app_publication">
             <div class="container">
-              <img
-                src="assets/emerge.png"
-                alt=""
-                style="max-width: 175px; margin: 0 0 32px"
-              />
+              <style>
+                .app_publication p {
+                  width: 100%;
+                }
+
+                .app_publication .emerge-title__logo {
+                  max-width: 175px;
+                  margin: 0;
+                  margin-right: 30px;
+                }
+
+                .emerge-title {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  text-align: right;
+                  margin-bottom: 32px;
+                }
+
+                @media screen and (max-width: 900px) {
+                  .app_publication .emerge-title__logo {
+                    max-width: 100px;
+                    margin-right: 20px;
+                  }
+                }
+              </style>
+              <div class="emerge-title">
+                <img
+                  src="assets/emerge.png"
+                  alt=""
+                  class="emerge-title__logo"
+                />
+                <div class="emerge-title__aside">
+                  <h5 class="main_color">
+                    25 февраля 2021 года, четверг <br />[15:00 – 16:15]
+                  </h5>
+                  <p>Виртуальное мероприятие</p>
+                </div>
+              </div>
+
               <h1 class="margin_bottom-32">ПРОГРАММА</h1>
               <p class="margin_bottom-16">Уважаемый доктор!</p>
               <p class="margin_bottom-32">
                 От лица компании «Такеда» и международных экспертов в области
                 онкогематологии приглашаем Вас на вебинар EMERGE 2021:
               </p>
-              <h3 class="second_color">
+              <h3 class="second_color" style="text-align: center">
                 ОТ КЛИНИЧЕСКИХ ИССЛЕДОВАНИЙ ДО РЕАЛЬНОЙ КЛИНИЧЕСКОЙ ПРАКТИКИ,
                 ОБЕСПЕЧИВАЕМ БУДУЩЕЕ ПАЦИЕНТОВ С ПОМОЩЬЮ ИНГИБИТОРОВ ПРОТЕАСОМ
               </h3>
-              <h5 class="main_color">
+              <h5 class="main_color" style="text-align: center">
                 25 февраля 2021 года, четверг <br />[15:00 – 16:15]
               </h5>
 
@@ -383,8 +418,66 @@
                   Пожалуйста, убедитесь, что Вы зарегистрированы на мероприятие
                 </strong>
               </p>
-              <div class="back-to-list">
-                <a href="#" class="main_background_color">Регистрация</a>
+              <style>
+                .emerge-button {
+                  display: table;
+                  margin: 0 auto 32px;
+                  text-decoration: none;
+                  padding: 15px 25px;
+                  border-radius: 100px;
+                  background: #d7477b;
+                  color: #fff;
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  transition: background-color 0.2s ease;
+                  font-size: 16px;
+                }
+
+                .emerge-button:hover {
+                  background: #df6b95;
+                }
+              </style>
+              <a href="#" class="emerge-button">Регистрация</a>
+              <p class="margin_bottom-16">
+                С нетерпением ждем встречи с Вами на нашем мероприятии.
+              </p>
+              <p>
+                С уважением, <br />
+                Профессор А. Чари (А. Chari)
+              </p>
+            </div>
+          </section>
+
+          <section class="app_publication" style="background: #f5f7f8">
+            <div class="container">
+              <p>
+                Данный вебинар является рекламно-информационным мероприятием
+                компании Takeda Pharmaceuticals International AG и
+                предназначается исключительно для медицинских работников. На
+                данном мероприятии будут обсуждаться лекарственные средства
+                компании «Такеда». В ходе мероприятия будут предоставляться
+                ориентированные на конкретную страну инструкции по медицинскому
+                применению препаратов. <br /><br />
+                C-APROM/EUC/NINL/0004 | Январь 2021г.
+              </p>
+              <style>
+                .emerge-footer {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-top: 64px;
+                }
+
+                .emerge-footer img {
+                  max-width: 250px;
+                  width: 40%;
+                  margin: 0;
+                  mix-blend-mode: multiply;
+                }
+              </style>
+              <div class="emerge-footer">
+                <img src="assets/takeda.png" alt="Takeda" />
+                <img src="assets/ninlaro.png" alt="Ninlaro" />
               </div>
             </div>
           </section>
