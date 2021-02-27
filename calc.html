@@ -197,12 +197,53 @@
           <!-- calc-publication - Start -->
           <section class="app_publication calc-publication">
             <div class="container">
+              <link rel="stylesheet" href="css/banner.css" />
+              <style>
+                .banner {
+                  margin-bottom: 40px;
+                  padding: 50px;
+                  padding-right: 180px;
+
+                  color: #fff;
+                  border-radius: 9px;
+                  background-position: 50% 50%;
+                  background-size: cover;
+
+                  font-size: 14px;
+                  line-height: 22px;
+                }
+
+                .banner h2 {
+                  display: block;
+
+                  margin-bottom: 15px;
+
+                  font-size: 45px;
+                  font-weight: bold;
+                  line-height: 1.2;
+                }
+
+                .banner h2 span {
+                  color: #ef7622;
+                }
+
+                @media screen and (max-width: 768px) {
+                  .banner {
+                    padding: 30px 20px;
+                  }
+
+                  .banner h2 {
+                    font-size: 30px;
+                  }
+                }
+              </style>
               <div
-                class="calc-publication__banner"
-                style="background-image: url('assets/banner.jpg')"
+                class="banner"
+                style="background-image: url('assets/banners/blue.jpg')"
               >
                 <h2>
-                  <span>Калькулятор</span> показателя хрупкости при миеломе
+                  <span class="second_color">Калькулятор</span> показателя
+                  хрупкости при миеломе
                 </h2>
                 <span>
                   Разработан Международной Рабочей Группой по Миеломе для оценки
@@ -220,15 +261,15 @@
               </p>
               <div class="calc-publication__list">
                 <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">0</span>
+                  <span class="calc-publication__item-title">0</span>
                   <span>«в хорошей физической форме»</span>
                 </div>
                 <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">1</span>
+                  <span class="calc-publication__item-title">1</span>
                   <span>«в средней физической форме»</span>
                 </div>
                 <div class="calc-publication__item">
-                  <span class="calc-publication-item-title">
+                  <span class="calc-publication__item-title">
                     2 <span>и более</span>
                   </span>
                   <span>«в ослабленном состоянии»</span>

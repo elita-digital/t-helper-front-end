@@ -41,34 +41,6 @@
   background: #f2914e;
 }
 
-.calc-publication__banner {
-  margin-bottom: 40px;
-  padding: 50px;
-  padding-right: 180px;
-
-  color: #fff;
-  border-radius: 9px;
-  background-position: 50% 50%;
-  background-size: cover;
-
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.calc-publication__banner h2 {
-  display: block;
-
-  margin-bottom: 15px;
-
-  font-size: 45px;
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.calc-publication__banner h2 span {
-  color: #ef7622;
-}
-
 .calc-publication__list {
   display: flex;
 
@@ -102,7 +74,7 @@
   opacity: 0.5;
 }
 
-.calc-publication-item-title {
+.calc-publication__item-title {
   margin-right: 15px;
 
   opacity: 0.5;
@@ -111,7 +83,7 @@
   line-height: 1;
 }
 
-.calc-publication-item-title span {
+.calc-publication__item-title span {
   display: block;
 
   white-space: nowrap;
@@ -127,14 +99,6 @@
   .calc-publication__item {
     margin-right: 0;
     margin-bottom: 13px;
-  }
-
-  .calc-publication__banner {
-    padding: 30px 20px;
-  }
-
-  .calc-publication__banner h2 {
-    font-size: 30px;
   }
 
   .calc-publication__button {
