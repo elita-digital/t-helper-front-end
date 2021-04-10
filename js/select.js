@@ -1,13 +1,13 @@
 class Select {
-  constructor($selectWrap) {
-    const $select = $selectWrap.querySelector(".select");
-    const $value = $selectWrap.querySelector(".select__value");
+  constructor($selectWrap, className = "select") {
+    const $select = $selectWrap.querySelector(`.${className}`);
+    const $value = $selectWrap.querySelector(`.${className}__value`);
     const $native = $selectWrap.querySelector("select");
     const $options = Array.from($selectWrap.querySelectorAll("option"));
 
-    let listHtml = '<div class="select__list">';
+    let listHtml = `<div class="${className}__list">`;
     $options.forEach(($option) => {
-      listHtml += `<a href="#" class="select__item" data-value="${$option.value}">${$option.innerText}</a>`;
+      listHtml += `<a href="#" class="${className}__item" data-value="${$option.value}">${$option.innerText}</a>`;
 
       if ($option.getAttribute("selected") !== null) {
         $select.classList.add("has-value");
@@ -18,14 +18,16 @@ class Select {
 
     $selectWrap.insertAdjacentHTML("beforeend", listHtml);
 
-    const $list = $selectWrap.querySelector(".select__list");
-    const $items = Array.from($selectWrap.querySelectorAll(".select__item"));
+    const $list = $selectWrap.querySelector(`.${className}__list`);
+    const $items = Array.from(
+      $selectWrap.querySelectorAll(`.${className}__item`)
+    );
 
     $select.addEventListener("click", (e) => {
       e.preventDefault();
 
-      $list.classList.add("active");
-      $select.classList.add("active");
+      $list.classList.toggle("active");
+      $select.classList.toggle("active");
     });
 
     $items.forEach(($item) => {
@@ -56,8 +58,10 @@ class Select {
 
   static initAll() {
     const $selects = Array.from(document.querySelectorAll(".select__wrap"));
+    $selects.forEach(($select) => new Select($select));
 
-    $selects.forEach(($selectWrap) => new Select($selectWrap));
+    const $dropdowns = Array.from(document.querySelectorAll(".dropdown__wrap"));
+    $dropdowns.forEach(($dropdown) => new Select($dropdown, "dropdown"));
   }
 }
 
