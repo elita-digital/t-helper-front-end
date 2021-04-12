@@ -190,6 +190,9 @@ class MapSection {
             <div class="map__item-content">
               <strong>${DATA.cities[lpu.city].title},</strong><br />
               <span>${lpu.address}</span>
+              <a href="${lpu.protocol}://${
+          lpu.site
+        }" class="map__item-site-link" target="_blank">${lpu.site}</a>
               <a href="#" class="map__item-link">Показать на карте</a>
             </div>
           </div>`;
@@ -221,7 +224,10 @@ class MapSection {
                 <span class="map__placemark-title">${lpu.title}</span>
                 <span class="map__placemark-adress">
                   <strong>${DATA.cities[lpu.city].title},</strong>
-                  ${lpu.address}
+                  ${lpu.address}<br>
+                  <a href="${lpu.protocol}://${lpu.site}" target="_blank">${
+              lpu.site
+            }</a>
                 </span>
               </div>`,
           },

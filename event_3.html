@@ -2,16 +2,28 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://t-helper.pro/bitrix/cache/css/s1/takeda/template_82922d4f411bf32983eb120eaf28c46e/template_82922d4f411bf32983eb120eaf28c46e_v1.css?1611742128301216"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/old.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <script
+      src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="js/old.js" defer></script>
+    <title>Takeda</title>
   </head>
   <body>
     <div
@@ -193,10 +205,11 @@
                 .banner {
                   margin-bottom: 40px;
                   padding: 50px;
+
+                  color: #fff;
                   border-radius: 9px;
                   background-position: 50% 50%;
                   background-size: cover;
-                  color: #fff;
 
                   font-size: 14px;
                   line-height: 22px;
@@ -204,7 +217,9 @@
 
                 .banner h2 {
                   display: block;
+
                   margin: 0;
+
                   font-size: 40px;
                   font-weight: bold;
                   line-height: 1.2;
@@ -212,7 +227,9 @@
 
                 .banner h3 {
                   display: block;
+
                   margin: 0;
+
                   font-size: 28px;
                   font-weight: bold;
                   line-height: 1.2;
@@ -253,7 +270,9 @@
                 .emerge__item {
                   display: flex;
                   align-items: center;
+
                   padding: 2rem;
+
                   border-radius: 15px;
                 }
 
@@ -275,12 +294,15 @@
 
                 .emerge__speaker img {
                   display: block;
-                  border-radius: 50%;
+
                   width: 150px;
                   height: 150px;
+                  margin: 0;
+
+                  border-radius: 50%;
+
                   object-fit: cover;
                   object-position: 50% 50%;
-                  margin: 0;
                 }
 
                 @media screen and (max-width: 900px) {

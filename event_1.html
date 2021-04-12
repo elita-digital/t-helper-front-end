@@ -2,16 +2,28 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://t-helper.pro/bitrix/cache/css/s1/takeda/template_82922d4f411bf32983eb120eaf28c46e/template_82922d4f411bf32983eb120eaf28c46e_v1.css?1611742128301216"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/old.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <script
+      src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="js/old.js" defer></script>
+    <title>Takeda</title>
   </head>
   <body>
     <div
@@ -204,8 +216,10 @@
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  text-align: right;
+
                   margin-bottom: 32px;
+
+                  text-align: right;
                 }
 
                 @media screen and (max-width: 900px) {
@@ -251,7 +265,9 @@
                 .emerge__item {
                   display: flex;
                   align-items: center;
+
                   padding: 2rem;
+
                   border-radius: 15px;
                 }
 
@@ -269,19 +285,23 @@
                 }
 
                 .emerge__speaker {
-                  text-align: center;
                   margin-left: 30px;
+
+                  text-align: center;
                 }
 
                 .emerge__speaker img {
                   display: block;
+
                   margin: 0 auto 8px;
+
                   border-radius: 50%;
                 }
 
                 @media screen and (max-width: 900px) {
                   .emerge__item {
                     display: block;
+
                     margin: 24px 0;
                   }
 
@@ -294,8 +314,9 @@
                   }
 
                   .emerge__speakers {
-                    margin-left: -30px;
                     justify-content: center;
+
+                    margin-left: -30px;
                   }
 
                   .emerge__speaker img {
@@ -421,16 +442,20 @@
               <style>
                 .emerge-button {
                   display: table;
+
                   margin: 0 auto 32px;
-                  text-decoration: none;
                   padding: 15px 25px;
+
+                  transition: background-color 0.2s ease;
+                  text-decoration: none;
+                  text-transform: uppercase;
+
+                  color: #fff;
                   border-radius: 100px;
                   background: #d7477b;
-                  color: #fff;
-                  text-transform: uppercase;
-                  font-weight: bold;
-                  transition: background-color 0.2s ease;
+
                   font-size: 16px;
+                  font-weight: bold;
                 }
 
                 .emerge-button:hover {
@@ -465,13 +490,15 @@
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
+
                   margin-top: 64px;
                 }
 
                 .emerge-footer img {
-                  max-width: 250px;
                   width: 40%;
+                  max-width: 250px;
                   margin: 0;
+
                   mix-blend-mode: multiply;
                 }
               </style>
