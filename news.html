@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/old.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <script
+      src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="js/old.js" defer></script>
+    <title>Публикации и полезные материалы</title>
+  </head>
+  <body>
+    <div
+      class="wrapper mainWrapper red newsPage"
+      data-page-type="publicationPage"
+      data-page-color="blue"
+    >
+      <header>
+        <div class="container">
+          <div class="menuWrapper">
+            <div class="top">
+              <a href="/" class="app_logo"></a>
+              <div class="closer">
+                <span class="second_background_color"></span>
+                <span class="second_background_color"></span>
+              </div>
+              <div class="subjects">
+                <span class="main_color">Выберите тематику:</span>
+                <div class="subjectsSelect js-spec-select disease">
+                  <div
+                    class="subjectsSelect__choosed second_background_color js-choosed"
+                  >
+                    Гемофилия А
+                  </div>
+                  <div class="subjectsSelect__list">
+                    <a
+                      href="/ingibitornaya-gemophilia-a/"
+                      data-id="14"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Ингибиторная Гемофилия А
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/gemophilia-a/"
+                      data-id="49"
+                      class="subjectsSelect__item js-item disease-option active"
+                    >
+                      Гемофилия А <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/mnozhestvennaya-mieloma/"
+                      data-id="15"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Множественная миелома
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/limfoma-khodzhkina/"
+                      data-id="16"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      CD 30+ лимфомы <i class="second_background_color"></i
+                    ></a>
+                  </div>
+                </div>
+                <button
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                  class="header-popup__button main_background_color header-popup__button-1"
+                >
+                  Обратная связь
+                </button>
+              </div>
+            </div>
+            <nav>
+              <a href="/gemophilia-a/"> Главная </a>
+              <a href="/gemophilia-a/publikatsii/" class="second_color">
+                Статьи и публикации
+              </a>
+              <a href="/gemophilia-a/video/"> Видео </a>
+              <a href="/gemophilia-a/therapy/"> Терапия </a>
+              <a href="/gemophilia-a/events/"> Мероприятия </a>
+              <button
+                onclick="formQuestionPopupControl.openPopup('.form-header')"
+                type="button"
+                class="header-popup__button main_background_color header-popup__button-2"
+              >
+                Обратная связь
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="mobileNav">
+          <div class="burger">
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+          </div>
+          <a href="/" class="app_logo"></a>
+          <div
+            class="searchIcon"
+            style="
+              background-image: url('https://t-helper.pro/gemophilia-a/publikatsii/diagnostika-gemofilii/');
+              background-size: contain;
+              background-position: center center;
+              background-repeat: no-repeat no-repeat;
+            "
+          ></div>
+        </div>
+      </header>
+
+      <div class="conet-wrapper">
+        <div
+          class="app_breadcrumbs container"
+          itemscope=""
+          itemtype="http://schema.org/BreadcrumbList"
+        >
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a href="/" title="Главная" itemprop="item"
+              >Главная<meta itemprop="position" content="1" /><meta
+                itemprop="name"
+                content="Главная"
+            /></a>
+          </div>
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a
+              href="/limfoma-khodzhkina/"
+              title="ЛИМФОМА ХОДЖКИНА"
+              itemprop="item"
+              >ЛИМФОМА ХОДЖКИНА<meta itemprop="position" content="2" /><meta
+                itemprop="name"
+                content="ЛИМФОМА ХОДЖКИНА"
+            /></a>
+          </div>
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a title="Мероприятия" itemprop="item"
+              >Мероприятия<meta itemprop="position" content="3" /><meta
+                itemprop="name"
+                content="Мероприятия"
+            /></a>
+          </div>
+        </div>
+
+        <div class="row container">
+          <aside class="app_filters">
+            <h5 class="typesTab main_background_color" onclick="openFilters()">
+              Фильтры
+            </h5>
+            <div class="types">
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?section_id=43"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?section_id=43&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="main_color"
+                data-section-id="43"
+              >
+                <i class="main_background_color"></i> Все
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?section_id=4"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?section_id=4&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class=""
+                data-section-id="4"
+              >
+                <i class=""></i> Клинические исследования
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?section_id=5"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?section_id=5&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class=""
+                data-section-id="5"
+              >
+                <i class=""></i> Статьи и обзоры
+              </a>
+            </div>
+            <h6>Дата публикации</h6>
+            <div class="dates">
+              <div class="date from">
+                <span>с</span>
+                <input
+                  type="text"
+                  name="active_from"
+                  autocomplete="off"
+                  data-url="/limfoma-khodzhkina/publikatsii/?"
+                  value=""
+                  id="dp1618223499343"
+                  class="hasDatepicker"
+                />
+                <div class="clearBtn"></div>
+              </div>
+              <div class="date by">
+                <span>по</span>
+                <input
+                  type="text"
+                  name="active_to"
+                  autocomplete="off"
+                  data-url="/limfoma-khodzhkina/publikatsii/?"
+                  value=""
+                  id="dp1618223499344"
+                  class="hasDatepicker"
+                />
+                <div class="clearBtn"></div>
+              </div>
+            </div>
+
+            <h6>Теги:</h6>
+            <div class="tags">
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?tags[]=Брентуксимаб ведотин"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=Брентуксимаб ведотин&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="tag second_background_color--new"
+              >
+                Брентуксимаб ведотин
+                <div class="closer"></div>
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?tags[]=исследование"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=исследование&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="tag second_background_color--new"
+              >
+                исследование
+                <div class="closer"></div>
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?tags[]=эффективность"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=эффективность&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="tag second_background_color--new"
+              >
+                эффективность
+                <div class="closer"></div>
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?tags[]=COVID-19"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=COVID-19&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="tag second_background_color--new"
+              >
+                COVID-19
+                <div class="closer"></div>
+              </a>
+              <a
+                href="/limfoma-khodzhkina/publikatsii/?tags[]=NCCN"
+                onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=NCCN&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                class="tag second_background_color--new"
+              >
+                NCCN
+                <div class="closer"></div>
+              </a>
+              <div class="tags more" style="display: none">
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?tags[]=ЛХ"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=ЛХ&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class="tag second_background_color--new"
+                >
+                  ЛХ
+                  <div class="closer"></div>
+                </a>
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?tags[]=ПЭТ/КТ"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=ПЭТ/КТ&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class="tag second_background_color--new"
+                >
+                  ПЭТ/КТ
+                  <div class="closer"></div>
+                </a>
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?tags[]=рекомендации"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=рекомендации&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class="tag second_background_color--new"
+                >
+                  рекомендации
+                  <div class="closer"></div>
+                </a>
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?tags[]=ТКЛ"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?tags[]=ТКЛ&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class="tag second_background_color--new"
+                >
+                  ТКЛ
+                  <div class="closer"></div>
+                </a>
+              </div>
+            </div>
+            <a class="showMore">Показать больше</a>
+          </aside>
+
+          <div class="content">
+            <div class="swiper-container vueSlider app_top_slider container">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide news-large-card"
+                  style="
+                    background-image: url('https://t-helper.pro/upload/iblock/63d/63d247ccebc7634275e5e47772cf085a.jpg');
+                  "
+                >
+                  <div class="tags">
+                    <a href="#" class="tag">Брентуксимаб ведотин</a>
+                    <a href="#" class="tag">Исследование</a>
+                    <a href="#" class="tag">Эффективность</a>
+                  </div>
+                  <time>12:49 18 мая 2020</time>
+                  <h3>
+                    Исследование ECHELON-1: результаты 5-летнего наблюдения
+                  </h3>
+                  <p>
+                    В исследовании ECHELON-1 лечение брентуксимаб ведотином в
+                    сочетании с доксорубицином, винбластином и дакарбазином (A +
+                    AVD) значительно улучшало модифицированную выживаемость без
+                    прогрессирования (мВБП) у пациентов с распространенными
+                    стадиями лимфомы Ходжкина по сравнению с доксорубицином,
+                    блеомицином, винбластином и дакарбазином (ABVD).
+                  </p>
+                  <div class="news-large-card__row">
+                    <div class="rating">
+                      <span class="rating__title">Рейтинг материала:</span>
+                      <div class="rating__stars rating__stars--has-active">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#" class="active"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                      </div>
+                    </div>
+                    <a href="#" class="app_btn main_color">Читать далее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="app_sorting">
+              <h5>Сортировка</h5>
+              <h6>
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?sort=NAME&amp;method=ASC"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?sort=NAME&amp;method=ASC&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class=""
+                >
+                  Я - а
+                </a>
+              </h6>
+              <h6>
+                <a
+                  href="/limfoma-khodzhkina/publikatsii/?sort=ACTIVE_FROM&amp;method=DESC"
+                  onclick="BX.ajax.insertToNode('/limfoma-khodzhkina/publikatsii/?sort=ACTIVE_FROM&amp;method=DESC&amp;bxajaxid=ea9d488b051869857dde5c4b31013919', 'comp_ea9d488b051869857dde5c4b31013919'); return false;"
+                  class="main_color"
+                >
+                  Старые - новые
+                </a>
+              </h6>
+            </div>
+
+            <!-- news-cards - Start -->
+            <section class="news-cards">
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- news-cards - End -->
+
+            <div class="load_more right loaderButton">
+              <a
+                class="second_background_color"
+                onclick="return ajaxPageLoader.loadAjaxPagePublication(this.href)"
+                href="/limfoma-khodzhkina/publikatsii/?PAGEN_2=2"
+                >Загрузить ещё</a
+              >
+            </div>
+          </div>
+
+          <script type="application/javascript">
+            var ajaxId = "ea9d488b051869857dde5c4b31013919";
+
+            window.addEventListener("load", function () {
+              initDatePicker();
+              initTagToggle();
+              initSliderVue();
+            });
+          </script>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-mask"></div>
+        <div class="new-container">
+          <div class="top-container">
+            <div class="footer-left">
+              <div class="footer-left-top">
+                <a href="/">
+                  <img
+                    src="https://t-helper.pro/assets/img/footer/cancel-footer-logo.svg"
+                    alt="Логотип CancelR"
+                  />
+                </a>
+                <button
+                  class="footer-button"
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                >
+                  Обратная связь
+                </button>
+              </div>
+              <div class="footer-left-bottom">
+                <p>Правовая информация</p>
+                <a
+                  class="underline"
+                  href="/docs/14fd70120d007aaa.pdf"
+                  target="_blank"
+                  >Политика обработки персональных данных</a
+                >
+                <a
+                  class="underline"
+                  href="/docs/eba70598bbdd1d88.pdf"
+                  target="_blank"
+                  >Пользовательское соглашение</a
+                >
+              </div>
+            </div>
+            <div class="footer-right">
+              <a href="https://www.takeda.com/ru-ru">
+                <img
+                  src="https://t-helper.pro/assets/img/takeda_logo.svg"
+                  alt="Логотип Такеда"
+                />
+              </a>
+              <p>©&nbsp;Takeda, 2020. Все права защищены.</p>
+              <p>
+                119048&nbsp;Москва, ул. Усачёва дом&nbsp;2, стр.1, Бизнес-центр
+                «Фьюжн Парк».
+              </p>
+              <p>RU/ADC/0620/0065 Июнь 2020</p>
+            </div>
+          </div>
+          <p class="footer-bottom">
+            Владельцем сайта t-helper.pro является ООО «Такеда Фармасьютикалс».
+            Заявление о нарушении авторских и смежных прав может быть отправлено
+            по адресу
+            <a class="underline" href="mailto:russia@takeda.com" target="_blank"
+              >russia@takeda.com</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/select.js" defer></script>
+  </body>
+</html>
