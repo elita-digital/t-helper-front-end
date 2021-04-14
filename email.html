@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/old.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <script
+      src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="js/old.js" defer></script>
+    <title>Публикации и полезные материалы</title>
+  </head>
+  <body>
+    <div class="wrapper mainWrapper red">
+      <header>
+        <div class="container">
+          <div class="menuWrapper">
+            <div class="top">
+              <a href="/" class="app_logo"></a>
+              <div class="closer">
+                <span class="second_background_color"></span>
+                <span class="second_background_color"></span>
+              </div>
+              <div class="subjects">
+                <span class="main_color">Выберите тематику:</span>
+                <div class="subjectsSelect js-spec-select disease">
+                  <div
+                    class="subjectsSelect__choosed second_background_color js-choosed"
+                  >
+                    Гемофилия А
+                  </div>
+                  <div class="subjectsSelect__list">
+                    <a
+                      href="/ingibitornaya-gemophilia-a/"
+                      data-id="14"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Ингибиторная Гемофилия А
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/gemophilia-a/"
+                      data-id="49"
+                      class="subjectsSelect__item js-item disease-option active"
+                    >
+                      Гемофилия А <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/mnozhestvennaya-mieloma/"
+                      data-id="15"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Множественная миелома
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/limfoma-khodzhkina/"
+                      data-id="16"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      CD 30+ лимфомы <i class="second_background_color"></i
+                    ></a>
+                  </div>
+                </div>
+                <button
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                  class="header-popup__button main_background_color header-popup__button-1"
+                >
+                  Обратная связь
+                </button>
+              </div>
+            </div>
+            <nav>
+              <a href="/gemophilia-a/"> Главная </a>
+              <a href="/gemophilia-a/publikatsii/" class="second_color">
+                Статьи и публикации
+              </a>
+              <a href="/gemophilia-a/video/"> Видео </a>
+              <a href="/gemophilia-a/therapy/"> Терапия </a>
+              <a href="/gemophilia-a/events/"> Мероприятия </a>
+              <button
+                onclick="formQuestionPopupControl.openPopup('.form-header')"
+                type="button"
+                class="header-popup__button main_background_color header-popup__button-2"
+              >
+                Обратная связь
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="mobileNav">
+          <div class="burger">
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+          </div>
+          <a href="/" class="app_logo"></a>
+          <div
+            class="searchIcon"
+            style="
+              background-image: url('https://t-helper.pro/gemophilia-a/publikatsii/diagnostika-gemofilii/');
+              background-size: contain;
+              background-position: center center;
+              background-repeat: no-repeat no-repeat;
+            "
+          ></div>
+        </div>
+      </header>
+
+      <div class="conet-wrapper">
+        <div
+          class="app_breadcrumbs container"
+          itemscope=""
+          itemtype="http://schema.org/BreadcrumbList"
+        >
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a href="/" title="Главная" itemprop="item"
+              >Главная<meta itemprop="position" content="1" /><meta
+                itemprop="name"
+                content="Главная"
+            /></a>
+          </div>
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a
+              href="/limfoma-khodzhkina/"
+              title="ЛИМФОМА ХОДЖКИНА"
+              itemprop="item"
+              >ЛИМФОМА ХОДЖКИНА<meta itemprop="position" content="2" /><meta
+                itemprop="name"
+                content="ЛИМФОМА ХОДЖКИНА"
+            /></a>
+          </div>
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a title="Мероприятия" itemprop="item"
+              >Мероприятия<meta itemprop="position" content="3" /><meta
+                itemprop="name"
+                content="Мероприятия"
+            /></a>
+          </div>
+        </div>
+
+        <!-- email - Start -->
+        <section class="email">
+          <div class="container">
+            <div class="email__banner">
+              <h2>Спасибо за вашу оценку!</h2>
+              <p>Нам важно Ваше мнение, чтобы становиться лучше.</p>
+              <p>
+                <strong>
+                  Поделитесь, пожалуйста, как мы можем сделать наши рассылки
+                  интереснее:
+                </strong>
+              </p>
+            </div>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span>Мне не интересна эта тема</span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span>Мне не интересен этот спикер</span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span>Слишком много писем</span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span>Другое</span>
+            </label>
+            <textarea
+              class="email__textarea"
+              placeholder="Опишите, почему Вам не понравилась рассылка"
+            ></textarea>
+            <a href="#" class="app_btn main_background_color">Подтвердить</a>
+          </div>
+        </section>
+        <!-- email - End -->
+
+        <!-- email - Start -->
+        <section class="email">
+          <div class="container">
+            <div class="email__banner">
+              <h2>Нам очень грустно расставаться с вами!</h2>
+              <p>
+                Но мы можем стать лучше, если вы поделитесь с нами обратной
+                связью:
+              </p>
+            </div>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Мне интересно получать другие научные новости </span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Мне интересны другие мероприятия/спикеры </span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Я предлагаю добавить: </span>
+            </label>
+            <textarea
+              class="email__textarea"
+              placeholder="Опишите, почему Вам не понравилась рассылка"
+            ></textarea>
+            <a href="#" class="app_btn main_background_color">Отписаться</a>
+          </div>
+        </section>
+        <!-- email - End -->
+
+        <!-- email - Start -->
+        <section class="email">
+          <div class="container">
+            <div class="email__banner">
+              <h2>Спасибо за вашу оценку!</h2>
+              <p>Нам важно Ваше мнение, чтобы становиться лучше.</p>
+              <p>
+                <strong>
+                  Поделитесь, пожалуйста, как мы можем сделать наши рассылки
+                  интереснее:
+                </strong>
+              </p>
+            </div>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Мне интересно получать научные новости по этой теме </span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Мне интересен спикер/мероприятие </span>
+            </label>
+            <label class="email__radio">
+              <input name="response" type="radio" />
+              <i></i>
+              <span> Я предлагаю добавить: </span>
+            </label>
+            <textarea
+              class="email__textarea"
+              placeholder="Опишите, почему Вам не понравилась рассылка"
+            ></textarea>
+            <a href="#" class="app_btn main_background_color">Подтвердить</a>
+          </div>
+        </section>
+        <!-- email - End -->
+
+        <!-- email - Start -->
+        <section class="email">
+          <div class="container">
+            <div class="email__banner">
+              <h2>Благодарим за ваше мнение!</h2>
+              <p>
+                Так же вы можете ознакомиться с подобранными для вас тематиками:
+              </p>
+            </div>
+            <section class="news-cards">
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-cards__item">
+                <h3>
+                  Успехи в терапии рецидивирующей или рефрактерной лимфомы
+                  Ходжкина
+                </h3>
+                <div class="news-cards__item-row">
+                  <time>07 Июль 2020</time>
+                  <a href="#" class="app_btn main_background_color"
+                    >Читать далее</a
+                  >
+                </div>
+                <div class="rating">
+                  <span class="rating__title">Рейтинг материала:</span>
+                  <div class="rating__stars rating__stars--has-active">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#" class="active"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <a href="#" class="app_btn main_background_color"
+              >Еще больше новостей</a
+            >
+          </div>
+        </section>
+        <!-- email - End -->
+      </div>
+
+      <footer class="footer">
+        <div class="footer-mask"></div>
+        <div class="new-container">
+          <div class="top-container">
+            <div class="footer-left">
+              <div class="footer-left-top">
+                <a href="/">
+                  <img
+                    src="https://t-helper.pro/assets/img/footer/cancel-footer-logo.svg"
+                    alt="Логотип CancelR"
+                  />
+                </a>
+                <button
+                  class="footer-button"
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                >
+                  Обратная связь
+                </button>
+              </div>
+              <div class="footer-left-bottom">
+                <p>Правовая информация</p>
+                <a
+                  class="underline"
+                  href="/docs/14fd70120d007aaa.pdf"
+                  target="_blank"
+                  >Политика обработки персональных данных</a
+                >
+                <a
+                  class="underline"
+                  href="/docs/eba70598bbdd1d88.pdf"
+                  target="_blank"
+                  >Пользовательское соглашение</a
+                >
+              </div>
+            </div>
+            <div class="footer-right">
+              <a href="https://www.takeda.com/ru-ru">
+                <img
+                  src="https://t-helper.pro/assets/img/takeda_logo.svg"
+                  alt="Логотип Такеда"
+                />
+              </a>
+              <p>©&nbsp;Takeda, 2020. Все права защищены.</p>
+              <p>
+                119048&nbsp;Москва, ул. Усачёва дом&nbsp;2, стр.1, Бизнес-центр
+                «Фьюжн Парк».
+              </p>
+              <p>RU/ADC/0620/0065 Июнь 2020</p>
+            </div>
+          </div>
+          <p class="footer-bottom">
+            Владельцем сайта t-helper.pro является ООО «Такеда Фармасьютикалс».
+            Заявление о нарушении авторских и смежных прав может быть отправлено
+            по адресу
+            <a class="underline" href="mailto:russia@takeda.com" target="_blank"
+              >russia@takeda.com</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/select.js" defer></script>
+  </body>
+</html>
