@@ -1796,8 +1796,8 @@
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
-  mask-size: cover;
-  -webkit-mask-size: cover;
+  mask-size: contain;
+  -webkit-mask-size: contain;
 }
 
 .lock__popup {
