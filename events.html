@@ -361,21 +361,46 @@
                 </div>
                 <div class="event-preview__footer">
                   <div class="event-preview__footer-col">
-                    <div class="dropdown__wrap">
-                      <div class="dropdown">
-                        <span class="dropdown__value">Напомнить</span>
-                      </div>
-                      <select>
-                        <option value="1">За 30 минут</option>
-                        <option value="2">За 1 час</option>
-                        <option value="3">За 2 дня</option>
-                      </select>
-                    </div>
-                    <a href="#" class="second_color">Подтвердить</a>
+                    <a
+                      href="#"
+                      class="event-preview__button event-preview__button--second-color"
+                    >
+                      Напомнить
+                    </a>
+                    <!--
+                    <a
+                      href="#"
+                      class="event-preview__button event-preview__button--second-color event-preview__button--undo"
+                    >
+                      Отменить
+                    </a>
+                    -->
+                    <a href="#" class="event-preview__add-to-calendar"
+                      >Добавить в календарь</a
+                    >
                   </div>
                   <div class="event-preview__footer-col">
-                    <a href="#" class="main_color">Перейти</a>
+                    <a href="#" class="main_color">
+                      <strong>Перейти</strong>
+                    </a>
+                    <!--
                     <a href="#" class="event-preview__button">Читать далее</a>
+                    -->
+                    <button class="event-preview__button lock">
+                      Читать далее
+                      <span class="lock__wrap">
+                        <i class="lock__icon"></i>
+                        <span class="lock__popup">
+                          <div>
+                            <span>
+                              Информация только для специалистов здравоохранения
+                            </span>
+                            <a href="#">Регистрация</a>
+                            <a href="#">Войти</a>
+                          </div>
+                        </span>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>

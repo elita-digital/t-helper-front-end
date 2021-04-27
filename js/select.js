@@ -59,9 +59,6 @@ class Select {
   static initAll() {
     const $selects = Array.from(document.querySelectorAll(".select__wrap"));
     $selects.forEach(($select) => new Select($select));
-
-    const $dropdowns = Array.from(document.querySelectorAll(".dropdown__wrap"));
-    $dropdowns.forEach(($dropdown) => new Select($dropdown, "dropdown"));
   }
 }
 
