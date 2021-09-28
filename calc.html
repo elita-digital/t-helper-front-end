@@ -21,8 +21,6 @@
       src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
       defer
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-    <script src="js/old.js" defer></script>
     <title>Takeda</title>
   </head>
   <body>
@@ -32,7 +30,7 @@
       data-page-color="violet"
     >
       <header>
-        <div class="container">
+        <div class="container show">
           <div class="menuWrapper">
             <div class="top">
               <a href="/" class="app_logo"></a>
@@ -44,7 +42,11 @@
                 <span class="main_color">Выберите тематику:</span>
                 <div class="subjectsSelect js-spec-select disease">
                   <div
-                    class="subjectsSelect__choosed second_background_color js-choosed"
+                    class="
+                      subjectsSelect__choosed
+                      second_background_color
+                      js-choosed
+                    "
                   >
                     Гемофилия А
                   </div>
@@ -84,24 +86,52 @@
                 <button
                   onclick="formQuestionPopupControl.openPopup('.form-header')"
                   type="button"
-                  class="header-popup__button main_background_color header-popup__button-1"
+                  class="
+                    header-popup__button
+                    main_background_color
+                    header-popup__button-1
+                  "
                 >
                   Обратная связь
                 </button>
               </div>
             </div>
             <nav>
-              <a href="/gemophilia-a/"> Главная </a>
-              <a href="/gemophilia-a/publikatsii/" class="second_color">
-                Статьи и публикации
-              </a>
-              <a href="/gemophilia-a/video/"> Видео </a>
-              <a href="/gemophilia-a/therapy/"> Терапия </a>
-              <a href="/gemophilia-a/events/"> Мероприятия </a>
+              <a href="#"> Главная </a>
+              <div class="subnav">
+                <a href="#" class="subnav__link"> Информация по заболеванию </a>
+                <div class="subnav__list">
+                  <a href="#">Эпидемиология</a>
+                  <a href="#" class="active">Классификация</a>
+                  <a href="#">Диагностика</a>
+                  <a href="#">Лечение</a>
+                  <a href="#">Драйверные мутации при НМРЛ</a>
+                  <a href="#">ALK мутация</a>
+                  <a href="#">Метастазы в головной мозг</a>
+                  <a href="#">Клинические рекомендации по НМРЛ</a>
+                </div>
+              </div>
+              <a href="#"> Мероприятия </a>
+              <a href="#"> Видео </a>
+              <div class="subnav">
+                <a href="#" class="subnav__link"> Информация по препаратам </a>
+                <div class="subnav__list">
+                  <a href="#">Клинические исследования по препарату</a>
+                  <a href="#">Инструкция по препарату</a>
+                  <a href="#">Новые молекулы</a>
+                  <a href="#">Ссылки</a>
+                </div>
+              </div>
+              <a href="#"> Справочные материалы </a>
+
               <button
                 onclick="formQuestionPopupControl.openPopup('.form-header')"
                 type="button"
-                class="header-popup__button main_background_color header-popup__button-2"
+                class="
+                  header-popup__button
+                  main_background_color
+                  header-popup__button-2
+                "
               >
                 Обратная связь
               </button>
@@ -521,7 +551,11 @@
           <div class="calc-popup__nav">
             <a
               href="#"
-              class="calc-popup__arrow calc-popup__arrow--prev js-calc-prev disabled"
+              class="
+                calc-popup__arrow calc-popup__arrow--prev
+                js-calc-prev
+                disabled
+              "
             ></a>
             <div class="calc-popup__dots js-calc-dots">
               <i class="active"></i>
