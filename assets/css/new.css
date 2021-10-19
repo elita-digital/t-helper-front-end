@@ -1120,7 +1120,7 @@
   height: 16px;
   margin-left: 14px;
 
-  content: url("../assets/icons/calendar.svg");
+  content: url("../icons/calendar.svg");
 }
 
 @media (max-width: 1024px) {
@@ -1210,8 +1210,8 @@
 
   background: var(--default-color);
 
-  -webkit-mask-image: url("../assets/icons/star.svg");
-  mask-image: url("../assets/icons/star.svg");
+  -webkit-mask-image: url("../icons/star.svg");
+  mask-image: url("../icons/star.svg");
   mask-position: center;
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
@@ -1645,7 +1645,7 @@
 
   color: #fff;
   border-radius: 10px;
-  background: url("../assets/email.svg");
+  background: url("../email.svg");
   background-color: #52a1ae;
   background-repeat: no-repeat;
   background-position: 100% 0%;
@@ -1810,8 +1810,8 @@
 
   background: currentColor;
 
-  -webkit-mask-image: url("../assets/icons/lock.svg");
-  mask-image: url("../assets/icons/lock.svg");
+  -webkit-mask-image: url("../icons/lock.svg");
+  mask-image: url("../icons/lock.svg");
   mask-position: center;
   -webkit-mask-position: center;
   mask-repeat: no-repeat;
@@ -2084,7 +2084,7 @@ header nav {
   padding: 115px 20px 80px;
 
   border-radius: 9px;
-  background: url("../assets/img/home/info_bg.jpg");
+  background: url("../img/home/info_bg.jpg");
   background-position: 50% 50%;
   background-size: cover;
 }
