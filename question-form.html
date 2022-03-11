@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/old.css" />
+    <link rel="stylesheet" href="assets/css/new.css" />
+    <script
+      src="https://unpkg.com/swiper@6.0.0/swiper-bundle.min.js"
+      defer
+    ></script>
+    <title>Takeda</title>
+  </head>
+  <body>
+    <div
+      class="wrapper mainWrapper red eventsPage"
+      data-page-type="publicationPage"
+      data-page-color="blue"
+    >
+      <header>
+        <div class="container">
+          <div class="menuWrapper">
+            <div class="top">
+              <a href="/" class="app_logo"></a>
+              <div class="closer">
+                <span class="second_background_color"></span>
+                <span class="second_background_color"></span>
+              </div>
+              <div class="subjects">
+                <span class="main_color">Выберите тематику:</span>
+                <div class="subjectsSelect js-spec-select disease">
+                  <div
+                    class="subjectsSelect__choosed second_background_color js-choosed"
+                  >
+                    Гемофилия А
+                  </div>
+                  <div class="subjectsSelect__list">
+                    <a
+                      href="/ingibitornaya-gemophilia-a/"
+                      data-id="14"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Ингибиторная Гемофилия А
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/gemophilia-a/"
+                      data-id="49"
+                      class="subjectsSelect__item js-item disease-option active"
+                    >
+                      Гемофилия А <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/mnozhestvennaya-mieloma/"
+                      data-id="15"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      Множественная миелома
+                      <i class="second_background_color"></i
+                    ></a>
+                    <a
+                      href="/limfoma-khodzhkina/"
+                      data-id="16"
+                      class="subjectsSelect__item js-item disease-option"
+                    >
+                      CD 30+ лимфомы <i class="second_background_color"></i
+                    ></a>
+                  </div>
+                </div>
+                <button
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                  class="header-popup__button main_background_color header-popup__button-1"
+                >
+                  Обратная связь
+                </button>
+              </div>
+            </div>
+            <nav>
+              <a href="/gemophilia-a/"> Главная </a>
+              <a href="/gemophilia-a/publikatsii/" class="second_color">
+                Статьи и публикации
+              </a>
+              <a href="/gemophilia-a/video/"> Видео </a>
+              <a href="/gemophilia-a/therapy/"> Терапия </a>
+              <a href="/gemophilia-a/events/"> Мероприятия </a>
+              <button
+                onclick="formQuestionPopupControl.openPopup('.form-header')"
+                type="button"
+                class="header-popup__button main_background_color header-popup__button-2"
+              >
+                Обратная связь
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="mobileNav">
+          <div class="burger">
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+            <span class="main_background_color"></span>
+          </div>
+          <a href="/" class="app_logo"></a>
+          <div
+            class="searchIcon"
+            style="
+              background-image: url('https://t-helper.pro/gemophilia-a/publikatsii/diagnostika-gemofilii/');
+              background-size: contain;
+              background-position: center center;
+              background-repeat: no-repeat no-repeat;
+            "
+          ></div>
+        </div>
+      </header>
+
+      <div class="conet-wrapper">
+        <div
+          class="app_breadcrumbs container"
+          itemscope=""
+          itemtype="http://schema.org/BreadcrumbList"
+        >
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a href="/" title="Главная" itemprop="item"
+              >Главная<meta itemprop="position" content="1" /><meta
+                itemprop="name"
+                content="Главная"
+            /></a>
+          </div>
+          <div
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+          >
+            <a title="Задать вопрос" itemprop="item"
+              >Задать вопрос<meta itemprop="position" content="3" /><meta
+                itemprop="name"
+                content="Задать вопрос"
+            /></a>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- question-form - Start -->
+          <form action="#" class="question-form">
+            <h4>Задать вопрос</h4>
+            <div class="question-form__step-1 active">
+              <h2>Шаг 1.</h2>
+              <div class="question-form__row">
+                <label class="question-form__filled">
+                  <span class="question-form__label">Фамилия</span>
+                  <input
+                    type="text"
+                    class="question-form__input"
+                    placeholder="Введите вашу фамилию"
+                    value="Иванов"
+                    disabled
+                    required
+                  />
+                  <a href="#" class="question-form__filled-edit"></a>
+                </label>
+                <!-- 
+                <label class="question-form__locked">
+                  <span class="question-form__label">Имя</span>
+                  <input
+                    type="text"
+                    class="question-form__input"
+                    placeholder="Введите ваше имя"
+                    disabled
+                    required
+                  />
+                  <div class="question-form__locked-popup">
+                    <span>Для того, чтобы отправить вопрос -</span> <br />
+                    <a href="#">авторизуйтесь</a> /
+                    <a href="#">зарегистрируйтесь</a>.
+                  </div>
+                </label>
+                -->
+                <label>
+                  <span class="question-form__label">Имя</span>
+                  <input
+                    type="text"
+                    class="question-form__input"
+                    placeholder="Введите ваше имя"
+                    required
+                  />
+                </label>
+                <label>
+                  <span class="question-form__label">Отчество</span>
+                  <input
+                    type="text"
+                    class="question-form__input"
+                    placeholder="Введите ваше отчество"
+                    required
+                  />
+                </label>
+                <label>
+                  <span class="question-form__label">E-mail</span>
+                  <input
+                    type="email"
+                    class="question-form__input"
+                    placeholder="Введите ваш e-mail"
+                    required
+                  />
+                </label>
+              </div>
+              <a
+                href="#"
+                class="question-form__button question-form__button--disabled"
+              >
+                Отправить вопрос
+              </a>
+            </div>
+            <div class="question-form__step-2">
+              <h2>Шаг 2.</h2>
+              <div class="question-form__row">
+                <label>
+                  <span class="question-form__label">Препарат</span>
+                  <select name="speaker" class="question-form__select">
+                    <option selected disabled>Выберите препарат</option>
+                    <option value="1">Мовипреп</option>
+                    <option value="2">Дексилант</option>
+                    <option value="3">Мезавант</option>
+                    <option value="4">Контролок</option>
+                  </select>
+                </label>
+                <label>
+                  <span class="question-form__label">Город</span>
+                  <div class="question-form__autocomplete">
+                    <input
+                      type="text"
+                      class="question-form__autocomplete-input question-form__input"
+                      placeholder="Введите название города"
+                      required
+                    />
+                    <div class="question-form__autocomplete-list">
+                      <a
+                        href="#"
+                        class="question-form__autocomplete-item hidden"
+                        >Москва</a
+                      >
+                      <a
+                        href="#"
+                        class="question-form__autocomplete-item hidden"
+                        >Питер</a
+                      >
+                    </div>
+                  </div>
+                </label>
+                <label class="question-form__wide">
+                  <span class="question-form__label">Вопрос</span>
+                  <textarea
+                    class="question-form__input question-form__input--textarea"
+                    rows="8"
+                    placeholder="Введите ваш вопрос"
+                  ></textarea>
+                </label>
+              </div>
+              <label class="question-form__checkbox">
+                <input type="checkbox" required />
+                <i></i>
+                <span class="question-form__checkbox-label">
+                  Я соглашаюсь с <a href="#">политикой использования</a> и
+                  ознакомлен с политикой
+                  <a href="#">в отношении обработки персональных данных</a>
+                </span>
+              </label>
+              <label class="question-form__checkbox">
+                <input type="checkbox" required />
+                <i></i>
+                <span class="question-form__checkbox-label">
+                  Я даю согласие на получение по электронной почте сообщений,
+                  приглашений к&nbsp;участию в мероприятиях и/или опросах,
+                  рассылки новостей и&nbsp;также другую информацию по
+                  научным/медицинским вопросам
+                </span>
+              </label>
+              <button class="question-form__button">Отправить вопрос</button>
+            </div>
+          </form>
+          <!-- question-form - End -->
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-mask"></div>
+        <div class="new-container">
+          <div class="top-container">
+            <div class="footer-left">
+              <div class="footer-left-top">
+                <a href="/">
+                  <img
+                    src="https://t-helper.pro/assets/img/footer/cancel-footer-logo.svg"
+                    alt="Логотип CancelR"
+                  />
+                </a>
+                <button
+                  class="footer-button"
+                  onclick="formQuestionPopupControl.openPopup('.form-header')"
+                  type="button"
+                >
+                  Обратная связь
+                </button>
+              </div>
+              <div class="footer-left-bottom">
+                <p>Правовая информация</p>
+                <a
+                  class="underline"
+                  href="/docs/14fd70120d007aaa.pdf"
+                  target="_blank"
+                  >Политика обработки персональных данных</a
+                >
+                <a
+                  class="underline"
+                  href="/docs/eba70598bbdd1d88.pdf"
+                  target="_blank"
+                  >Пользовательское соглашение</a
+                >
+              </div>
+            </div>
+            <div class="footer-right">
+              <a href="https://www.takeda.com/ru-ru">
+                <img
+                  src="https://t-helper.pro/assets/img/takeda_logo.svg"
+                  alt="Логотип Такеда"
+                />
+              </a>
+              <p>©&nbsp;Takeda, 2020. Все права защищены.</p>
+              <p>
+                119048&nbsp;Москва, ул. Усачёва дом&nbsp;2, стр.1, Бизнес-центр
+                «Фьюжн Парк».
+              </p>
+              <p>RU/ADC/0620/0065 Июнь 2020</p>
+            </div>
+          </div>
+          <p class="footer-bottom">
+            Владельцем сайта t-helper.pro является ООО «Такеда Фармасьютикалс».
+            Заявление о нарушении авторских и смежных прав может быть отправлено
+            по адресу
+            <a class="underline" href="mailto:russia@takeda.com" target="_blank"
+              >russia@takeda.com</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/select.js" defer></script>
+    <script src="assets/js/question-form.js" defer></script>
+  </body>
+</html>
