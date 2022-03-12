@@ -2234,6 +2234,7 @@ header nav {
   display: block;
 
   width: fit-content;
+  margin-top: 55px;
   padding: 11px 45px 15px;
 
   text-align: center;
