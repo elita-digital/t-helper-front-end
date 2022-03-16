@@ -2332,6 +2332,8 @@ header nav {
 }
 
 .question-form__locked.active .question-form__locked-popup {
+  pointer-events: all;
+
   opacity: 1;
 }
 
@@ -2360,6 +2362,7 @@ header nav {
 
   transition: opacity 0.4s ease;
   text-align: center;
+  pointer-events: none;
 
   opacity: 0;
   color: #b40b47;

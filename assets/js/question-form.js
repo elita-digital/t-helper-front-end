@@ -76,7 +76,7 @@ if ($questionForm) {
       e.preventDefault();
 
       $wrap.classList.remove("question-form__filled");
-      $input.removeAttribute("disabled");
+      $input.removeAttribute("readonly");
       $edit.remove();
     });
   });
@@ -101,6 +101,11 @@ if ($questionForm) {
   };
 
   $step1Inputs.forEach(($input) => {
+    $input.addEventListener("input", () => {
+      if (isInputsFilled())
+        $step1Next.classList.remove("question-form__button--disabled");
+    });
+
     $input.addEventListener("change", () => {
       if (isInputsFilled())
         $step1Next.classList.remove("question-form__button--disabled");
