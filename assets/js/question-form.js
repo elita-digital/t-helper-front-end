@@ -56,7 +56,7 @@ const $questionForm = document.querySelector(".question-form");
 if ($questionForm) {
   const $step1 = $questionForm.querySelector(".question-form__step-1");
   const $step1Inputs = Array.from(
-    $step1.querySelectorAll(".question-form__input")
+    $step1.querySelectorAll(".question-form__input[required]")
   );
   const $step1Next = $step1.querySelector(".question-form__button");
   const $step2 = $questionForm.querySelector(".question-form__step-2");
