@@ -51,6 +51,11 @@ class Autocomplete {
 
 Autocomplete.init();
 
+new Select(
+  document.querySelector(".question-form__select-wrap"),
+  "question-form__select"
+);
+
 const $questionForm = document.querySelector(".question-form");
 
 if ($questionForm) {
