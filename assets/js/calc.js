@@ -474,7 +474,7 @@ class Calculator {
       `&il=${IADLAnswers.join("")}` +
       `&b=${birthday.day}.${birthday.month}.${birthday.year}`;
 
-    this.$pdfLink = pdfLink;
+    this.$pdfLink.href = pdfLink;
   }
 }
 
