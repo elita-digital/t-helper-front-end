@@ -66,10 +66,10 @@ class Calculate {
   static TTL(age, CharlsonIndex, basicActivity, IADL) {
     let TTL = 0;
 
-    if (age >= 80) {
-      TTL += 2;
-    } else if (age >= 75) {
+    if (age >= 75 && age <= 80) {
       TTL += 1;
+    } else if (age >= 75) {
+      TTL += 2;
     }
 
     if (CharlsonIndex >= 2) TTL += 1;
