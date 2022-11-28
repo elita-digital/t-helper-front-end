@@ -2706,6 +2706,14 @@ header nav {
   margin: 1em 0;
 }
 
+.article p a {
+  text-decoration: underline;
+
+  color: var(--second);
+
+  font-weight: 600;
+}
+
 .article ol,
 .article ul {
   padding-left: 25px;
@@ -2719,6 +2727,41 @@ header nav {
 
 .article li:not(:last-child) {
   margin: 0 0 1em;
+}
+
+.article blockquote {
+  position: relative;
+
+  margin: 40px 0;
+  padding: 15px 10px 25px 70px;
+
+  border: 2px solid #13b1b0;
+
+  font-weight: 600;
+}
+
+.article blockquote::before {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+
+  content: "!";
+
+  color: #13b1b0;
+
+  font-size: 128px;
+  font-weight: 300;
+  line-height: 1;
+
+  translate: 0 -50%;
+}
+
+.article blockquote p:first-child {
+  margin-top: 0;
+}
+
+.article blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .article__accent {
