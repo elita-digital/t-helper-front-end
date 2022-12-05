@@ -334,6 +334,18 @@
   font-size: 13px;
 }
 
+.calc-publication__approve {
+  display: block;
+
+  margin-top: 30px;
+
+  text-transform: uppercase;
+
+  color: #767676;
+
+  font-weight: 500;
+}
+
 @media screen and (max-width: 768px) {
   .calc-publication__banner {
     padding-left: 20px;
