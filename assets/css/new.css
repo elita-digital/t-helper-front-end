@@ -2801,43 +2801,56 @@ header nav {
   margin: 0 0 1em;
 }
 
-.article blockquote {
+.article__blockquote {
   position: relative;
 
   margin: 40px 0;
-  padding: 15px 10px 25px 70px;
+  padding: 20px 35px;
 
   border: 2px solid #13b1b0;
-
-  font-weight: 600;
 }
 
-.article blockquote::before {
-  position: absolute;
-  top: 50%;
-  left: 20px;
+.article__blockquote:has(.article__blockquote-icon) {
+  padding-right: 10px;
+  padding-left: 70px;
+}
 
-  content: "!";
+.article__blockquote:has(.article__blockquote-icon img) {
+  padding-right: 10px;
+  padding-left: 100px;
+}
+
+.article__blockquote-icon {
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
 
   color: #13b1b0;
 
   font-size: 128px;
   font-weight: 300;
   line-height: 1;
-
-  translate: 0 -50%;
 }
 
-.article blockquote p:first-child {
+.article__blockquote-icon img {
+  display: block;
+}
+
+.article__blockquote p:first-child,
+.article__blockquote-icon + p {
   margin-top: 0;
 }
 
-.article blockquote p:last-child {
+.article__blockquote p:last-child {
   margin-bottom: 0;
 }
 
 .article__accent {
   color: var(--accent);
+}
+
+.article__second {
+  color: var(--second);
 }
 
 .article__blue {
@@ -2861,15 +2874,24 @@ header nav {
   background: #a2edec;
 }
 
+.article__light-alt {
+  margin-bottom: 40px;
+  padding: 30px 40px;
+
+  background: #e6f3f2;
+}
+
 .article__blue *:first-child,
 .article__green *:first-child,
-.article__light *:first-child {
+.article__light *:first-child,
+.article__light-alt *:first-child {
   margin-top: 0;
 }
 
 .article__blue *:last-child,
 .article__green *:last-child,
-.article__light *:last-child {
+.article__light *:last-child,
+.article__light-alt *:last-child {
   margin-bottom: 0;
 }
 
@@ -2906,6 +2928,21 @@ header nav {
 
 .article__list strong {
   color: var(--accent);
+}
+
+.article__list.article__list--without-bg {
+  margin: 15px 0;
+  padding: 0;
+
+  background: none;
+}
+
+.article__list.article__list--without-bg .article__item {
+  gap: 17px;
+}
+
+.article__list.article__list--without-bg .article__item span {
+  flex: 1;
 }
 
 .article__item {
@@ -3118,6 +3155,12 @@ header nav {
 
   .article__literature {
     flex-direction: column;
+  }
+
+  .article__blockquote-icon {
+    bottom: 50%;
+
+    translate: 0 -50%;
   }
 }
 /* article - End */
