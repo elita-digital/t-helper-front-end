@@ -2802,29 +2802,20 @@ header nav {
 }
 
 .article__blockquote {
-  position: relative;
+  display: flex;
+  align-items: flex-end;
 
   margin: 40px 0;
-  padding: 20px 35px;
+  padding: 20px 30px 20px 15px;
 
   border: 2px solid #13b1b0;
 }
 
-.article__blockquote:has(.article__blockquote-icon) {
-  padding-right: 10px;
-  padding-left: 70px;
-}
-
-.article__blockquote:has(.article__blockquote-icon img) {
-  padding-right: 10px;
-  padding-left: 100px;
+.article__blockquote-content {
+  padding-left: 15px;
 }
 
 .article__blockquote-icon {
-  position: absolute;
-  bottom: 22px;
-  left: 20px;
-
   color: #13b1b0;
 
   font-size: 128px;
@@ -3157,10 +3148,8 @@ header nav {
     flex-direction: column;
   }
 
-  .article__blockquote-icon {
-    bottom: 50%;
-
-    translate: 0 -50%;
+  .article__blockquote {
+    align-items: center;
   }
 }
 /* article - End */
