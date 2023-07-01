@@ -251,10 +251,8 @@
     <script src="assets/js/select.js" defer></script>
     <script src="assets/js/map.js" defer></script>
     <script>
-console.log($( ".map__selects .select__list" ).length);
 	    $(document).mouseup( function(e){
-console.log(55);
-		    var el = $( ".map__selects .select__list" );
+   		var el = $( ".map__selects .select__list" );
 		if ( !el.is(e.target)
 		    && el.has(e.target).length === 0 ) {
 			el.removeClass('active');
