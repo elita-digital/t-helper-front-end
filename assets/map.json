@@ -222,7 +222,7 @@
       "title": "МНИОИ им. П.А. Герцена – филиал ФГБУ НМИЦ радиологии МЗ России)",
       "city": 0,
       "address": "2-й Боткинский проезд, 3",
-      "site": "www.mnioi.ru",
+      "site": "new.nmicr.ru/mnioi/",
       "protocol": "https",
       "lat": 55.7802527,
       "lng": 37.5562574
@@ -231,7 +231,7 @@
       "title": "МРНЦ им. А.Ф. Цыба – ФГБУ НМИЦ радиологии МЗ России",
       "city": 8,
       "address": "ул. Жукова, д. 10",
-      "site": "mrrc-obninsk.ru/",
+      "site": "new.nmicr.ru/mrrc/",
       "protocol": "https",
       "lat": 55.102544,
       "lng": 36.610642
